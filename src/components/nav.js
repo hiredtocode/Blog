@@ -15,9 +15,12 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight"
 import ListItem from "@material-ui/core/ListItem"
 import ListItemIcon from "@material-ui/core/ListItemIcon"
 import ListItemText from "@material-ui/core/ListItemText"
-import InboxIcon from "@material-ui/icons/MoveToInbox"
-import MailIcon from "@material-ui/icons/Mail"
 import { Link } from "gatsby"
+import HomeIcon from "@material-ui/icons/Home"
+import InfoIcon from "@material-ui/icons/Info"
+import LibraryBooksIcon from "@material-ui/icons/LibraryBooks"
+import PostAddIcon from "@material-ui/icons/PostAdd"
+import ContactMailIcon from "@material-ui/icons/ContactMail"
 
 
 const drawerWidth = 240
@@ -143,18 +146,66 @@ export default function Nav() {
           </IconButton>
         </div>
         <Divider />
-        <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-            <ListItem button key={text}>
+        <List component="nav">
+          <Link to="/">
+            {" "}
+            <ListItem
+              button
+              style={{ paddingLeft: 24 }}
+            >
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                <HomeIcon />
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primary="Home" />
             </ListItem>
-          ))}
+          </Link>
+          <Link to="/about">
+            <ListItem
+              button
+              style={{ paddingLeft: 24 }}
+            >
+              <ListItemIcon>
+                <InfoIcon />
+              </ListItemIcon>
+              <ListItemText primary={"About"} />
+            </ListItem>
+          </Link>
+
+          <Link to="/posts">
+            <ListItem
+              button
+              style={{ paddingLeft: 24 }}
+              >
+              <ListItemIcon>
+                <PostAddIcon />
+              </ListItemIcon>
+              <ListItemText primary={"Posts"} />
+            </ListItem>
+          </Link>
+          <Link to="/contact">
+            <ListItem
+              button
+              style={{ paddingLeft: 24 }}
+              >
+              <ListItemIcon>
+                <ContactMailIcon />
+              </ListItemIcon>
+              <ListItemText primary={"Contact"} />
+            </ListItem>
+          </Link>
+          <Link to="/portfolio">
+            <ListItem
+              button
+              style={{ paddingLeft: 24 }}
+              >
+              <ListItemIcon>
+                <LibraryBooksIcon />
+              </ListItemIcon>
+              <ListItemText primary={"Portfolio"} />
+            </ListItem>
+          </Link>
         </List>
         <Divider />
-
       </Drawer>
     </div>
   )
