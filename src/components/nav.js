@@ -97,6 +97,8 @@ export default function Nav() {
     setOpen(false)
   }
 
+
+
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -119,7 +121,7 @@ export default function Nav() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Web Dev Madness
+            Web Dev
           </Typography>
         </Toolbar>
       </AppBar>
@@ -147,7 +149,7 @@ export default function Nav() {
         </div>
         <Divider />
         <List component="nav">
-          <Link to="/">
+          <Link to="/" activeClassName="active" partiallyActive={true}>
             {" "}
             <ListItem button style={{ paddingLeft: 24 }}>
               <ListItemIcon>
