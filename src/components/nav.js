@@ -21,7 +21,7 @@ import InfoIcon from "@material-ui/icons/Info"
 import LibraryBooksIcon from "@material-ui/icons/LibraryBooks"
 import PostAddIcon from "@material-ui/icons/PostAdd"
 import ContactMailIcon from "@material-ui/icons/ContactMail"
-
+import "./nav.css"
 
 const drawerWidth = 240
 
@@ -87,7 +87,7 @@ const useStyles = makeStyles(theme => ({
 export default function Nav() {
   const classes = useStyles()
   const theme = useTheme()
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(true)
 
   const handleDrawerOpen = () => {
     setOpen(true)
@@ -149,10 +149,7 @@ export default function Nav() {
         <List component="nav">
           <Link to="/">
             {" "}
-            <ListItem
-              button
-              style={{ paddingLeft: 24 }}
-            >
+            <ListItem button style={{ paddingLeft: 24 }}>
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
@@ -160,22 +157,15 @@ export default function Nav() {
             </ListItem>
           </Link>
           <Link to="/about">
-            <ListItem
-              button
-              style={{ paddingLeft: 24 }}
-            >
+            <ListItem button style={{ paddingLeft: 24 }}>
               <ListItemIcon>
                 <InfoIcon />
               </ListItemIcon>
               <ListItemText primary={"About"} />
             </ListItem>
           </Link>
-
           <Link to="/posts">
-            <ListItem
-              button
-              style={{ paddingLeft: 24 }}
-              >
+            <ListItem button style={{ paddingLeft: 24 }}>
               <ListItemIcon>
                 <PostAddIcon />
               </ListItemIcon>
@@ -183,10 +173,7 @@ export default function Nav() {
             </ListItem>
           </Link>
           <Link to="/contact">
-            <ListItem
-              button
-              style={{ paddingLeft: 24 }}
-              >
+            <ListItem button style={{ paddingLeft: 24 }}>
               <ListItemIcon>
                 <ContactMailIcon />
               </ListItemIcon>
@@ -194,10 +181,7 @@ export default function Nav() {
             </ListItem>
           </Link>
           <Link to="/portfolio">
-            <ListItem
-              button
-              style={{ paddingLeft: 24 }}
-              >
+            <ListItem button style={{ paddingLeft: 24 }}>
               <ListItemIcon>
                 <LibraryBooksIcon />
               </ListItemIcon>
