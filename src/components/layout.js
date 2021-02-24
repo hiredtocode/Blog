@@ -1,14 +1,18 @@
 import React from "react"
 import Nav from "./nav"
 import Content from "./content"
+import Header from "./header"
+import { ThemeProvider } from "@material-ui/core/styles"
+import theme from "../material-ui-top-layout/theme"
 
-export default function Layout({ children }) {
+export default function Layout ( { children } ) {
+
   return (
-    <div style={{ margin: `0 auto`, maxWidth: 650, padding: `0 1rem` }}>
+    <ThemeProvider theme={theme}>
+      <Header />
       <Nav />
       <Content />
-
       {children}
-    </div>
+    </ThemeProvider>
   )
 }

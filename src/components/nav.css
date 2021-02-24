@@ -1,3 +1,7 @@
 .navActive {
   background-color: lightslategray;
 }
+
+.navlink {
+  text-decoration: none;
+}
