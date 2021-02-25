@@ -4,6 +4,7 @@ import Content from "./content"
 import Header from "./header"
 import { ThemeProvider } from "@material-ui/core/styles"
 import theme from "../material-ui-top-layout/theme"
+import Footer from "./footer"
 
 export default function Layout ( { children } ) {
 
@@ -12,7 +13,8 @@ export default function Layout ( { children } ) {
       <Header />
       <Nav />
       <Content />
-      {children}
+      {children }
+      <Footer />
     </ThemeProvider>
   )
 }

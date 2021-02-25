@@ -10,6 +10,22 @@ module.exports = {
   },
   /* Your site config here */
   plugins: [
+    //plugins
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
+    //theme
+    `gatsby-theme-material-ui`,
+
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+    },
+
     {
       resolve: `gatsby-plugin-webfonts`,
       options: {
@@ -40,9 +56,8 @@ module.exports = {
         //usePreload: true,
         //usePreconnect: false,
       },
+
     },
-    `gatsby-plugin-styled-components`,
-    `gatsby-theme-material-ui`,
-    `gatsby-plugin-react-helmet`,
+
   ],
 }

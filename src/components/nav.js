@@ -1,27 +1,30 @@
 import React from "react"
 import Header from "./header"
 import clsx from "clsx"
-import { makeStyles, useTheme } from "@material-ui/core/styles"
-import Drawer from "@material-ui/core/Drawer"
-import AppBar from "@material-ui/core/AppBar"
-import Toolbar from "@material-ui/core/Toolbar"
-import List from "@material-ui/core/List"
-import CssBaseline from "@material-ui/core/CssBaseline"
-import Typography from "@material-ui/core/Typography"
-import Divider from "@material-ui/core/Divider"
-import IconButton from "@material-ui/core/IconButton"
+import {
+  Drawer,
+  AppBar,
+  Toolbar,
+  List,
+  CssBaseline,
+  Typography,
+  Divider,
+  IconButton,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  makeStyles,
+  useTheme,
+} from "@material-ui/core"
 import MenuIcon from "@material-ui/icons/Menu"
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft"
 import ChevronRightIcon from "@material-ui/icons/ChevronRight"
-import ListItem from "@material-ui/core/ListItem"
-import ListItemIcon from "@material-ui/core/ListItemIcon"
-import ListItemText from "@material-ui/core/ListItemText"
 import { Link } from "gatsby-theme-material-ui"
 import HomeIcon from "@material-ui/icons/Home"
 import InfoIcon from "@material-ui/icons/Info"
 import LibraryBooksIcon from "@material-ui/icons/LibraryBooks"
-import PostAddIcon from "@material-ui/icons/PostAdd"
 import ContactMailIcon from "@material-ui/icons/ContactMail"
+import PostAddIcon from "@material-ui/icons/PostAdd"
 import "./nav.css"
 
 
@@ -157,7 +160,7 @@ export default function Nav () {
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
-              <ListItemText primary="Home" />
+              <ListItemText secondary="Home" />
             </ListItem>
           </Link>
 
@@ -166,7 +169,7 @@ export default function Nav () {
               <ListItemIcon>
                 <InfoIcon />
               </ListItemIcon>
-              <ListItemText primary={"About"} />
+              <ListItemText secondary={"About"} />
             </ListItem>
           </Link>
           <Link to="/posts" className="link">
@@ -174,7 +177,7 @@ export default function Nav () {
               <ListItemIcon>
                 <PostAddIcon />
               </ListItemIcon>
-              <ListItemText primary={"Posts"} />
+              <ListItemText secondary={"Posts"} />
             </ListItem>
           </Link>
           <Link to="/contact" className="link">
@@ -182,7 +185,7 @@ export default function Nav () {
               <ListItemIcon>
                 <ContactMailIcon />
               </ListItemIcon>
-              <ListItemText primary={"Contact"} />
+              <ListItemText secondary={"Contact"} />
             </ListItem>
           </Link>
           <Link to="/portfolio" className="link">
@@ -190,7 +193,7 @@ export default function Nav () {
               <ListItemIcon>
                 <LibraryBooksIcon />
               </ListItemIcon>
-              <ListItemText primary={"Portfolio"} />
+              <ListItemText secondary={"Portfolio"} />
             </ListItem>
           </Link>
         </List>
