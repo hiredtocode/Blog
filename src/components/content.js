@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 
 const drawerWidth = 240;
@@ -71,6 +72,7 @@ export default function Content() {
 
   return (
     <div className={classes.root}>
+      <CssBaseline />
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Typography paragraph>
