@@ -1,20 +1,30 @@
-import { createMuiTheme } from "@material-ui/core"
-import { deepPurple, amber, grey } from "@material-ui/core/colors"
+import { createMuiTheme } from '@material-ui/core';
+import { deepPurple, amber } from '@material-ui/core/colors';
 
-const theme = createMuiTheme({
+const CustomTheme = createMuiTheme({
   palette: {
     primary: {
-      main: "#FFFFFF",
+      main: '#f1f1f1',
     },
     secondary: {
-      main: "#0f0",
-    }
+      main: '#242424',
+    },
+    text: {
+      primary: 'rgba(222,136,17,0.87)',
+      secondary: 'rgba(111,103,103,0.87)',
+      disabled: 'rgba(0, 0, 0, 0.38)',
+      hint: 'rgba(0, 0, 0, 0.38)',
+    },
   },
   typography: {
     // fontFamily: "Comic Sans MS",
+
     body2: {
       // fontFamily: "Times New Roman",
-      fontSize: "1.1rem",
+      fontSize: '1.1rem',
+      secondary: {
+        main: '#222',
+      },
     },
   },
   // shape: {
@@ -24,11 +34,15 @@ const theme = createMuiTheme({
   overrides: {
     MuiButton: {
       root: {
-        textTransform: "none",
-        padding: "20px",
+        textTransform: 'none',
+        padding: '20px',
       },
     },
+    MuiListItemText: {
+      color: 'MuiListItemText-primary',
+    },
   },
+
   props: {
     MuiButtonBase: {
       disableRipple: true,
@@ -36,76 +50,50 @@ const theme = createMuiTheme({
       // color: "primary",
     },
     MuiCheckbox: {
-      disableRipple: true,
+      // disableRipple: true,
     },
     MuiTextField: {
       // variant: "outlined",
-      InputLabelProps: {
-        shrink: false,
-      },
+      // InputLabelProps: {
+      //   shrink: false,
+      // },
     },
   },
-} )
+  MuiListItemIcon: {
+    root: {
+      color: '#fff',
+    },
+  },
+});
 
-theme.props = {
-  MuiButton: {
-    disableElevation: false,
-  },
-  MuiInputLabel: {
-    shrink: false
-  },
-  MuiInput: {
-    disableUnderline: false
-  },
-  MuiTooltip: {
-    arrow: true
-  }
+CustomTheme.props = {
+  // MuiButton: {
+  //   disableElevation: false,
+  // },
+  // MuiInputLabel: {
+  //   shrink: false
+  // },
+  // MuiInput: {
+  //   disableUnderline: false
+  // },
+  // MuiTooltip: {
+  //   arrow: true
+  // }
 };
 
-theme.overrides = {
+CustomTheme.overrides = {
   MuiButton: {
     root: {
       borderRadius: 5,
-      textTransform: "none",
+      textTransform: 'none',
     },
     containedPrimary: {
-      "&:hover": {
+      '&:hover': {
         backgroundColor: amber,
         color: deepPurple,
       },
     },
-    containedSecondary: {
-      fontWeight: 500,
-    },
-    MuiInput: {
-      root: {
-        top: theme.spacing(2),
-        border: `1px solid ${grey[500]}`,
-        padding: theme.spacing(1),
-        outline: `1px solid transparent`,
-        "&$focused": {
-          border: `1px solid ${theme.palette.primary.main}`,
-          outline: `1px solid ${theme.palette.primary.main}`,
-        },
-      },
-    },
-    MuiInputLabel: {
-      root: {
-        textTransform: "uppercase",
-        fontSize: "1.5rem",
-      },
-    },
-    MuiTooltip: {
-      tooltip: {
-        backgroundColor: "#fff",
-        border: `2px solid ${theme.palette.primary.main}`,
-        color: theme.palette.primary.main,
-      },
-      arrow: {
-        color: theme.palette.primary.main
-      },
-    },
   },
-}
+};
 
-export default theme;
+export default CustomTheme;

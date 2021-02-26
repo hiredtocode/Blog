@@ -1,20 +1,21 @@
-import React from "react"
-import Nav from "./nav"
-import Content from "./content"
-import Header from "./header"
-import { ThemeProvider } from "@material-ui/core/styles"
-import theme from "../material-ui-top-layout/theme"
-import Footer from "./footer"
+import React from 'react';
+import { CssBaseline } from '@material-ui/core';
+import { ThemeProvider } from '@material-ui/core/styles';
+import Nav from './nav';
+import Content from './content';
+import Header from './header';
+import CustomTheme from '../material-ui-top-layout/theme';
+import Footer from './footer';
 
-export default function Layout ( { children } ) {
-
+export default function Layout({ children }) {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={CustomTheme}>
+      <CssBaseline />
       <Header />
       <Nav />
       <Content />
-      {children }
+      {children}
       <Footer />
     </ThemeProvider>
-  )
+  );
 }

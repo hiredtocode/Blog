@@ -1,12 +1,12 @@
-import styled from "styled-components"
-import { graphql } from "gatsby"
-import { Link } from "@reach/router"
-import React from "react"
-import Layout from "../components/layout"
+import styled from 'styled-components';
+import { graphql } from 'gatsby';
+import { Link } from '@reach/router';
+import React from 'react';
+import Layout from '../components/layout';
 
 const MainDiv = styled.div`
   width: 700px;
-`
+`;
 
 export default function About({ data }) {
   return (
@@ -17,7 +17,7 @@ export default function About({ data }) {
           My name is Jason Han and here in {data.site.siteMetadata.title}, I'll
           be sharing my experiences in both providing useful information through
           my blogs and also keeping track of my journey as a developer. I
-          believe that one of the best way to learn is to teach in{" "}
+          believe that one of the best way to learn is to teach in{' '}
           <a
             href="https://www.merriam-webster.com/dictionary/layman%27s%20terms"
             target="_"
@@ -45,7 +45,7 @@ export default function About({ data }) {
           <li>
             It's been about 6 months since I've been concentrating on learning
             how to code and working on becoming a React front-end developer. So
-            let me know if you're hiring!{" "}
+            let me know if you're hiring!{' '}
             <Link to="/contact/"> *wink wink*</Link>
           </li>
           <li>
@@ -63,7 +63,7 @@ export default function About({ data }) {
         </ul>
       </MainDiv>
     </Layout>
-  )
+  );
 }
 
 export const query = graphql`
@@ -74,4 +74,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

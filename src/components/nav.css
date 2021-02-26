@@ -5,3 +5,7 @@
 .navlink {
   text-decoration: none;
 }
+
+.active {
+  background-color: grey;
+}
