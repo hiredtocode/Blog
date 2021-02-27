@@ -13,9 +13,15 @@ import InfoIcon from '@material-ui/icons/Info';
 import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import PostAddIcon from '@material-ui/icons/PostAdd';
+import { makeStyles } from '@material-ui/core/styles';
+
 // import './nav.css';
 
 export default function Nav() {
+  const style = {
+    color: `red`,
+  };
+
   return (
     // <ThemeProvider theme={theme}>
     <div>
@@ -23,7 +29,7 @@ export default function Nav() {
       {/* //TODO active link highlight not working using activeStyle (Gatsby) check material UI active link */}
       <Divider />
       <List component="nav">
-        <Link to="/" activeStyle={{ backgroundColor: 'blue' }}>
+        <Link to="/" activeStyle={style}>
           <ListItem button disableRipple style={{ paddingLeft: 24 }}>
             <ListItemIcon>
               <HomeIcon color="primary" />
@@ -31,7 +37,7 @@ export default function Nav() {
             <ListItemText primary="Home" />
           </ListItem>
         </Link>
-        <Link to="/about" activeStyle={{ backgroundColor: 'blue' }}>
+        <Link to="/about" activeStyle={{ color: 'red' }}>
           <ListItem button disableRipple style={{ paddingLeft: 24 }}>
             <ListItemIcon>
               <InfoIcon color="primary" />
@@ -39,7 +45,7 @@ export default function Nav() {
             <ListItemText primary="About" />
           </ListItem>
         </Link>
-        <Link to="/posts" activeStyle={{ backgroundColor: 'blue' }}>
+        <Link to="/posts" activeStyle={{ color: 'red' }}>
           <ListItem button disableRipple style={{ paddingLeft: 24 }}>
             <ListItemIcon>
               <PostAddIcon color="primary" />
@@ -47,7 +53,7 @@ export default function Nav() {
             <ListItemText primary="Posts" />
           </ListItem>
         </Link>
-        <Link to="/contact" activeStyle={{ backgroundColor: 'blue' }}>
+        <Link to="/contact" activeStyle={{ color: 'red' }}>
           <ListItem button disableRipple style={{ paddingLeft: 24 }}>
             <ListItemIcon>
               <ContactMailIcon color="primary" />
@@ -55,7 +61,7 @@ export default function Nav() {
             <ListItemText primary="Contact" />
           </ListItem>
         </Link>
-        <Link to="/portfolio" activeStyle={{ backgroundColor: 'blue' }}>
+        <Link to="/portfolio" activeStyle={{ color: 'red' }}>
           <ListItem button disableRipple style={{ paddingLeft: 24 }}>
             <ListItemIcon>
               <LibraryBooksIcon color="primary" />
