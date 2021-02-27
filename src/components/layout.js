@@ -1,23 +1,33 @@
 import React from 'react';
 import { CssBaseline } from '@material-ui/core';
-// import { ThemeProvider } from '@material-ui/core/styles';
-// import Testnav from './testnav';
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Content from './content';
-// import CustomTheme from '../material-ui-top-layout/theme';
 import Footer from './footer';
-import SideMenu from './drawer';
+import SideMenu from './sidebar';
+
+const theme = createMuiTheme({
+  overrides: {
+    MuiCssBaseline: {
+      '@global': {
+        html: {
+          WebkitFontSmoothing: 'auto',
+          height: `100%`,
+        },
+        body: {
+          minHeight: `100%`,
+        },
+      },
+    },
+  },
+});
 
 export default function Layout({ children }) {
   return (
-    <>
-      {/* <ThemeProvider theme={CustomTheme}> */}
+    <ThemeProvider theme={theme}>
       <CssBaseline />
       <SideMenu />
-      {/* <Testnav /> */}
-      <Content />
-      {children}
+      <Content>{children}</Content>
       <Footer />
-      {/* // </ThemeProvider> */}
-    </>
+    </ThemeProvider>
   );
 }

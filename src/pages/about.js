@@ -2,12 +2,14 @@ import React from 'react';
 import { Link } from '@reach/router';
 // import Typography from '@material-ui/core/Typography';
 // import Layout from '../components/layout';
-import Content from '../components/content';
+// import Content from '../components/content';
 import Header from '../components/header';
+import Layout from '../components/layout';
+import Content from '../components/content';
 
 export default function About() {
   return (
-    <Content>
+    <Layout>
       <h2>
         Welcome to <Header />
       </h2>
@@ -57,6 +59,6 @@ export default function About() {
 
         <li>Last updated: Feb, 4th 2021</li>
       </ul>
-    </Content>
+    </Layout>
   );
 }
