@@ -13,7 +13,7 @@ import InfoIcon from '@material-ui/icons/Info';
 import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import PostAddIcon from '@material-ui/icons/PostAdd';
-import './nav.css';
+// import './nav.css';
 
 export default function Nav() {
   return (
@@ -26,15 +26,15 @@ export default function Nav() {
         <Link to="/" activeStyle={{ backgroundColor: 'blue' }}>
           <ListItem button disableRipple style={{ paddingLeft: 24 }}>
             <ListItemIcon>
-              <HomeIcon />
+              <HomeIcon color="primary" />
             </ListItemIcon>
-            <ListItemText secondary="Home" />
+            <ListItemText primary="Home" />
           </ListItem>
         </Link>
         <Link to="/about" activeStyle={{ backgroundColor: 'blue' }}>
           <ListItem button disableRipple style={{ paddingLeft: 24 }}>
             <ListItemIcon>
-              <InfoIcon />
+              <InfoIcon color="primary" />
             </ListItemIcon>
             <ListItemText primary="About" />
           </ListItem>
@@ -42,25 +42,25 @@ export default function Nav() {
         <Link to="/posts" activeStyle={{ backgroundColor: 'blue' }}>
           <ListItem button disableRipple style={{ paddingLeft: 24 }}>
             <ListItemIcon>
-              <PostAddIcon />
+              <PostAddIcon color="primary" />
             </ListItemIcon>
-            <ListItemText secondary="Posts" />
+            <ListItemText primary="Posts" />
           </ListItem>
         </Link>
         <Link to="/contact" activeStyle={{ backgroundColor: 'blue' }}>
           <ListItem button disableRipple style={{ paddingLeft: 24 }}>
             <ListItemIcon>
-              <ContactMailIcon />
+              <ContactMailIcon color="primary" />
             </ListItemIcon>
-            <ListItemText secondary="Contact" />
+            <ListItemText primary="Contact" />
           </ListItem>
         </Link>
         <Link to="/portfolio" activeStyle={{ backgroundColor: 'blue' }}>
           <ListItem button disableRipple style={{ paddingLeft: 24 }}>
             <ListItemIcon>
-              <LibraryBooksIcon />
+              <LibraryBooksIcon color="primary" />
             </ListItemIcon>
-            <ListItemText secondary="Portfolio" />
+            <ListItemText primary="Portfolio" />
           </ListItem>
         </Link>
       </List>
