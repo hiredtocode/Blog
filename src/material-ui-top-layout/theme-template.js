@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { createMuiTheme } from '@material-ui/core';
 
-const theme = createMuiTheme({
+const custom = createMuiTheme({
   breakpoints: {
     keys: {
       0: 'xs',
@@ -28,12 +28,12 @@ const theme = createMuiTheme({
     // gutters: gutters(),
   },
   toolbar: {
-    // minHeight: 56,
+    minHeight: 56,
     // @media( min - width: 0px ) and( orientation: landscape ): {
     // minHeight: 48;
     // },
     // @media( min - width: 600px ): {
-    //   minHeight: 64
+    //   minHeight: 55,
     //  },
     overrides: {},
   },
@@ -294,3 +294,5 @@ const theme = createMuiTheme({
     tooltip: 1500,
   },
 });
+
+export default custom;

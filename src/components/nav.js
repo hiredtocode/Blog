@@ -27,7 +27,7 @@ export default function Nav() {
       <Divider />
       <List component="nav">
         <Link to="/" activeStyle={style}>
-          <ListItem button disableRipple style={{ paddingLeft: 24 }}>
+          <ListItem button disableRipple>
             <ListItemIcon>
               <HomeIcon color="primary" />
             </ListItemIcon>
@@ -35,7 +35,7 @@ export default function Nav() {
           </ListItem>
         </Link>
         <Link to="/about" activeStyle={style}>
-          <ListItem button disableRipple style={{ paddingLeft: 24 }}>
+          <ListItem button disableRipple>
             <ListItemIcon>
               <InfoIcon color="primary" />
             </ListItemIcon>
@@ -43,7 +43,7 @@ export default function Nav() {
           </ListItem>
         </Link>
         <Link to="/posts" activeStyle={style}>
-          <ListItem button disableRipple style={{ paddingLeft: 24 }}>
+          <ListItem button disableRipple>
             <ListItemIcon>
               <PostAddIcon color="primary" />
             </ListItemIcon>
@@ -51,7 +51,7 @@ export default function Nav() {
           </ListItem>
         </Link>
         <Link to="/contact" activeStyle={style}>
-          <ListItem button disableRipple style={{ paddingLeft: 24 }}>
+          <ListItem button disableRipple>
             <ListItemIcon>
               <ContactMailIcon color="primary" />
             </ListItemIcon>
@@ -59,7 +59,7 @@ export default function Nav() {
           </ListItem>
         </Link>
         <Link to="/portfolio" activeStyle={style}>
-          <ListItem button disableRipple style={{ paddingLeft: 24 }}>
+          <ListItem button disableRipple>
             <ListItemIcon>
               <LibraryBooksIcon color="primary" />
             </ListItemIcon>

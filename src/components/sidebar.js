@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
     overflowX: 'hidden',
     width: theme.spacing(7) + 1,
     [theme.breakpoints.up('sm')]: {
-      width: theme.spacing(9) + 1,
+      width: theme.spacing(7) + 1,
     },
   },
   header: {
@@ -74,8 +74,14 @@ const useStyles = makeStyles((theme) => ({
   toolbar: {
     display: 'flex',
     alignItems: 'center',
+    paddingLeft: 18,
+
     justifyContent: 'flex-end',
-    padding: theme.spacing(0, 1),
+    [theme.breakpoints.down('xs')]: {
+      minHeight: 64,
+      paddingLeft: 18,
+      paddingRight: 24,
+    },
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
   },
@@ -85,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
   },
   overrides: {
     IconButton: {
-      olor: `red`,
+      color: `red`,
     },
   },
 }));
@@ -105,7 +111,7 @@ export default function SideMenu({ children }) {
   };
 
   return (
-    // <ThemeProvider theme={theme}>
+    // <ThemeProvider theme={custom}>
     <div className={classes.root}>
       <CssBaseline />
       <AppBar
@@ -114,7 +120,7 @@ export default function SideMenu({ children }) {
           [classes.appBarShift]: open,
         })}
       >
-        <Toolbar>
+        <Toolbar className={classes.toolbar}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
