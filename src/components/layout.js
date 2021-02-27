@@ -6,12 +6,13 @@ import Nav from './nav';
 // import Content from './content';
 import CustomTheme from '../material-ui-top-layout/theme';
 import Footer from './footer';
+import SideMenu from './drawer';
 
 export default function Layout({ children }) {
   return (
     <ThemeProvider theme={CustomTheme}>
       <CssBaseline />
-      <Nav />
+      <SideMenu />
       {/* <Testnav /> */}
       {/* <Content /> */}
       {children}
