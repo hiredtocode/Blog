@@ -14,7 +14,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { Link } from 'gatsby-theme-material-ui';
-import './nav.css';
 import clsx from 'clsx';
 import Header from './header';
 import Nav from './nav';
@@ -86,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
   },
   overrides: {
     IconButton: {
-      backgroundColor: `red`,
+      olor: `red`,
     },
   },
 }));

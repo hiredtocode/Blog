@@ -14,8 +14,6 @@ import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import PostAddIcon from '@material-ui/icons/PostAdd';
 
-// import './nav.css';
-
 export default function Nav() {
   const style = {
     color: `red`,

@@ -28,7 +28,7 @@ const theme = createMuiTheme({
     // gutters: gutters(),
   },
   toolbar: {
-    minHeight: 56,
+    // minHeight: 56,
     // @media( min - width: 0px ) and( orientation: landscape ): {
     // minHeight: 48;
     // },
