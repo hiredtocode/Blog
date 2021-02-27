@@ -96,7 +96,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Nav() {
+export default function Nav({ children }) {
   const classes = useStyles();
   const theme = useTheme();
 
@@ -133,7 +133,9 @@ export default function Nav() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap className={classes.header}>
-            <Header />
+            <Link to="/" style={{ color: 'inherit' }}>
+              <Header />
+            </Link>
           </Typography>
           <Button color="inherit">LOGIN</Button>
         </Toolbar>
@@ -171,7 +173,6 @@ export default function Nav() {
               <ListItemText secondary="Home" />
             </ListItem>
           </Link>
-
           <Link to="/about" activeStyle={{ backgroundColor: 'blue' }}>
             <ListItem button disableRipple style={{ paddingLeft: 24 }}>
               <ListItemIcon>
@@ -207,7 +208,7 @@ export default function Nav() {
         </List>
         <Divider />
       </Drawer>
-      <Content />
+      {children}
     </div>
     // </ThemeProvider>
   );
