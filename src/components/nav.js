@@ -6,7 +6,6 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  makeStyles,
 } from '@material-ui/core';
 import { Link } from 'gatsby-theme-material-ui';
 import HomeIcon from '@material-ui/icons/Home';
@@ -15,12 +14,6 @@ import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import PostAddIcon from '@material-ui/icons/PostAdd';
 import './nav.css';
-
-const useStyles = makeStyles(() => ({
-  root: {
-    display: 'flex',
-  },
-}));
 
 export default function Nav() {
   return (
