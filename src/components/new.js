@@ -87,6 +87,11 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     padding: theme.spacing(3),
   },
+  overrides: {
+    IconButton: {
+      color: `red`,
+    },
+  },
 }));
 
 export default function SideMenu({ children }) {

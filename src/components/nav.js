@@ -21,10 +21,12 @@ export default function Nav() {
 
   return (
     // <ThemeProvider theme={theme}>
+    // <nav className={classes.drawer}>
     <div>
       <CssBaseline />
       {/* //TODO active link highlight not working using activeStyle (Gatsby) check material UI active link */}
       <Divider />
+      {/* <Hidden smUp implementation="css" /> */}
       <List component="nav">
         <Link to="/" activeStyle={style}>
           <ListItem button disableRipple>

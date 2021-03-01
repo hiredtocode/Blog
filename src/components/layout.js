@@ -4,6 +4,7 @@ import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Content from './content';
 import Footer from './footer';
 import SideMenu from './sidebar';
+// import SideMenu from './testnav';
 
 const theme = createMuiTheme({
   overrides: {
