@@ -89,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Sidebar2({ children }) {
+export default function SidebarClosed({ children }) {
   const classes = useStyles();
   const theme = useTheme();
 
@@ -115,7 +115,6 @@ export default function Sidebar2({ children }) {
       >
         <Toolbar className={classes.toolbar}>
           <IconButton
-            button
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
@@ -124,7 +123,7 @@ export default function Sidebar2({ children }) {
               [classes.hide]: open,
             })}
           >
-            <MenuIcon Button />
+            <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap className={classes.header}>
             <Link to="/" style={{ color: 'inherit' }}>

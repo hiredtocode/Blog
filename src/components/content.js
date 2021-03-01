@@ -1,8 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Container } from '@material-ui/core';
+import { Container, Paper } from '@material-ui/core';
 
-const sidebarWidth = 240;
+const sidebarWidth = 250;
 const useStyles = makeStyles((style) => ({
   root: {
     display: 'flex',
@@ -18,13 +18,17 @@ const useStyles = makeStyles((style) => ({
     padding: style.spacing(3),
     paddingLeft: `${sidebarWidth}px`,
     // paddingRight: `240px`,
-    paddingTop: `60px`,
+    paddingTop: `65px`,
     // [theme.breakpoints.up('md')]: {
     //  backgroundColor: theme.palette.primary.main,
     // },
     // [theme.breakpoints.up('lg')]: {
     //  backgroundColor: green[500],
     // },
+  },
+
+  paper: {
+    height: `100vh`,
   },
 }));
 
@@ -34,7 +38,9 @@ export default function Content({ children }) {
   return (
     <div className={classes.root}>
       <main className={classes.content}>
-        <Container maxWidth="md">{children}</Container>
+        <Paper className={classes.paper}>
+          <Container maxWidth="md">{children}</Container>
+        </Paper>
       </main>
     </div>
   );

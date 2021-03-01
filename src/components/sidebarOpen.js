@@ -89,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Sidebar({ children }) {
+export default function SidebarOpen({ children }) {
   const classes = useStyles();
   const theme = useTheme();
 
