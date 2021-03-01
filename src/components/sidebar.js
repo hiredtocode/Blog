@@ -9,6 +9,7 @@ import {
   IconButton,
   makeStyles,
   useTheme,
+  useMediaQuery,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
@@ -17,6 +18,7 @@ import { Link } from 'gatsby-theme-material-ui';
 import clsx from 'clsx';
 import Header from './header';
 import Nav from './nav';
+import Sidebar2 from './sidebar2';
 
 const drawerWidth = 240;
 
@@ -89,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SideMenu({ children }) {
+export default function Sidebar({ children }) {
   const classes = useStyles();
   const theme = useTheme();
 
@@ -102,61 +104,69 @@ export default function SideMenu({ children }) {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+  const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     // <ThemeProvider theme={custom}>
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar
-        position="fixed"
-        className={clsx(classes.appBar, {
-          [classes.appBarShift]: open,
-        })}
-      >
-        <Toolbar className={classes.toolbar}>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            className={clsx(classes.menuButton, {
-              [classes.hide]: open,
+      {isMatch ? (
+        <Sidebar2 />
+      ) : (
+        <>
+          {' '}
+          <AppBar
+            position="fixed"
+            className={clsx(classes.appBar, {
+              [classes.appBarShift]: open,
             })}
           >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap className={classes.header}>
-            <Link to="/" style={{ color: 'inherit' }}>
-              <Header />
-            </Link>
-          </Typography>
-          <Button color="inherit">LOGIN</Button>
-        </Toolbar>
-      </AppBar>
-      <Drawer
-        variant="permanent"
-        className={clsx(classes.drawer, {
-          [classes.drawerOpen]: open,
-          [classes.drawerClose]: !open,
-        })}
-        classes={{
-          paper: clsx({
-            [classes.drawerOpen]: open,
-            [classes.drawerClose]: !open,
-          }),
-        }}
-      >
-        <div className={classes.toolbar}>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'rtl' ? (
-              <ChevronRightIcon />
-            ) : (
-              <ChevronLeftIcon />
-            )}
-          </IconButton>
-        </div>
-        <Nav />
-      </Drawer>
+            <Toolbar className={classes.toolbar}>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                onClick={handleDrawerOpen}
+                edge="start"
+                className={clsx(classes.menuButton, {
+                  [classes.hide]: open,
+                })}
+              >
+                <MenuIcon />
+              </IconButton>
+              <Typography variant="h6" noWrap className={classes.header}>
+                <Link to="/" style={{ color: 'inherit' }}>
+                  <Header />
+                </Link>
+              </Typography>
+              <Button color="inherit">LOGIN</Button>
+            </Toolbar>
+          </AppBar>
+          <Drawer
+            variant="permanent"
+            className={clsx(classes.drawer, {
+              [classes.drawerOpen]: open,
+              [classes.drawerClose]: !open,
+            })}
+            classes={{
+              paper: clsx({
+                [classes.drawerOpen]: open,
+                [classes.drawerClose]: !open,
+              }),
+            }}
+          >
+            <div className={classes.toolbar}>
+              <IconButton onClick={handleDrawerClose}>
+                {theme.direction === 'rtl' ? (
+                  <ChevronRightIcon />
+                ) : (
+                  <ChevronLeftIcon />
+                )}
+              </IconButton>
+            </div>
+            <Nav />
+          </Drawer>
+        </>
+      )}
       {children}
     </div>
     // </ThemeProvider>

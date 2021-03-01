@@ -87,18 +87,13 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     padding: theme.spacing(3),
   },
-  overrides: {
-    IconButton: {
-      color: `red`,
-    },
-  },
 }));
 
-export default function SideMenu({ children }) {
+export default function Sidebar2({ children }) {
   const classes = useStyles();
   const theme = useTheme();
 
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);

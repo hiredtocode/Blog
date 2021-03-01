@@ -3,8 +3,8 @@ import { CssBaseline } from '@material-ui/core';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Content from './content';
 import Footer from './footer';
-import SideMenu from './sidebar';
-// import SideMenu from './testnav';
+// import Sidebar from './sidebarcopy';
+import Sidebar from './sidebar';
 
 const theme = createMuiTheme({
   overrides: {
@@ -26,7 +26,7 @@ export default function Layout({ children }) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <SideMenu />
+      <Sidebar />
       <Content>{children}</Content>
       <Footer />
     </ThemeProvider>

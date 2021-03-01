@@ -23,7 +23,7 @@ export default function Content({ children }) {
 
   return (
     <div className={classes.root}>
-      <main className={classes.content}>test{children}</main>
+      <main className={classes.content}>{children}</main>
     </div>
   );
 }
