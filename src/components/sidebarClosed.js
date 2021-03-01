@@ -115,6 +115,7 @@ export default function Sidebar2({ children }) {
       >
         <Toolbar className={classes.toolbar}>
           <IconButton
+            button
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
@@ -123,13 +124,14 @@ export default function Sidebar2({ children }) {
               [classes.hide]: open,
             })}
           >
-            <MenuIcon />
+            <MenuIcon Button />
           </IconButton>
           <Typography variant="h6" noWrap className={classes.header}>
             <Link to="/" style={{ color: 'inherit' }}>
               <Header />
             </Link>
           </Typography>
+
           <Button color="inherit">LOGIN</Button>
         </Toolbar>
       </AppBar>

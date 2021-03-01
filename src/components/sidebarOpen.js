@@ -9,7 +9,6 @@ import {
   IconButton,
   makeStyles,
   useTheme,
-  useMediaQuery,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
@@ -18,7 +17,6 @@ import { Link } from 'gatsby-theme-material-ui';
 import clsx from 'clsx';
 import Header from './header';
 import Nav from './nav';
-import Sidebar2 from './sidebarClosed';
 
 const drawerWidth = 240;
 

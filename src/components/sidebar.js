@@ -6,7 +6,6 @@ import {
   useTheme,
   useMediaQuery,
 } from '@material-ui/core';
-
 import SidebarClosed from './sidebarClosed';
 import SidebarOpen from './sidebarOpen';
 

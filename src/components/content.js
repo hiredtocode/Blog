@@ -1,6 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { Container } from '@material-ui/core';
 
+const sidebarWidth = 240;
 const useStyles = makeStyles((style) => ({
   root: {
     display: 'flex',
@@ -13,8 +15,16 @@ const useStyles = makeStyles((style) => ({
     display: 'flex',
     flexDirection: 'column',
     flexGrow: 1,
-    backgroundColor: 'grey',
     padding: style.spacing(3),
+    paddingLeft: `${sidebarWidth}px`,
+    // paddingRight: `240px`,
+    paddingTop: `60px`,
+    // [theme.breakpoints.up('md')]: {
+    //  backgroundColor: theme.palette.primary.main,
+    // },
+    // [theme.breakpoints.up('lg')]: {
+    //  backgroundColor: green[500],
+    // },
   },
 }));
 
@@ -23,7 +33,9 @@ export default function Content({ children }) {
 
   return (
     <div className={classes.root}>
-      <main className={classes.content}>{children}</main>
+      <main className={classes.content}>
+        <Container maxWidth="md">{children}</Container>
+      </main>
     </div>
   );
 }

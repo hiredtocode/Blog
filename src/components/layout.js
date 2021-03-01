@@ -3,7 +3,6 @@ import { CssBaseline } from '@material-ui/core';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Content from './content';
 import Footer from './footer';
-// import Sidebar from './sidebarcopy';
 import Sidebar from './sidebar';
 
 const theme = createMuiTheme({
