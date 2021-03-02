@@ -22,11 +22,11 @@ export default function Nav() {
   return (
     // <ThemeProvider theme={theme}>
     // <nav className={classes.drawer}>
+    // TODO Need to make the icons change colors too so that when the sidemenu is minimized users can see where they're at
+    // TODO tooltip when side menu is collapsed
     <div>
       <CssBaseline />
-      {/* //TODO active link highlight not working using activeStyle (Gatsby) check material UI active link */}
       <Divider />
-      {/* <Hidden smUp implementation="css" /> */}
       <List component="nav">
         <Link to="/" activeStyle={style}>
           <ListItem button disableRipple>
