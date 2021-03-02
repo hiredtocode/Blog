@@ -17,7 +17,6 @@ import { Link } from 'gatsby-theme-material-ui';
 import clsx from 'clsx';
 import Header from './header';
 import Nav from './nav';
-import DrawerWrapper from './drawerwrapper';
 
 const drawerWidth = 240;
 
@@ -135,7 +134,30 @@ export default function SidebarClosed({ children }) {
           <Button color="inherit">LOGIN</Button>
         </Toolbar>
       </AppBar>
-      <DrawerWrapper />
+      <Drawer
+        variant="permanent"
+        className={clsx(classes.drawer, {
+          [classes.drawerOpen]: open,
+          [classes.drawerClose]: !open,
+        })}
+        classes={{
+          paper: clsx({
+            [classes.drawerOpen]: open,
+            [classes.drawerClose]: !open,
+          }),
+        }}
+      >
+        <div className={classes.toolbar}>
+          <IconButton onClick={handleDrawerClose}>
+            {theme.direction === 'rtl' ? (
+              <ChevronRightIcon />
+            ) : (
+              <ChevronLeftIcon />
+            )}
+          </IconButton>
+        </div>
+        <Nav />
+      </Drawer>
       {children}
     </div>
     // </ThemeProvider>

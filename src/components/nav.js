@@ -22,8 +22,9 @@ export default function Nav() {
   return (
     // <ThemeProvider theme={theme}>
     // <nav className={classes.drawer}>
-    // TODO Need to make the icons change colors too so that when the sidemenu is minimized users can see where they're at
+    // TODO Need to make the icons change colors too so that when the side menu is minimized users can see where they're at
     // TODO tooltip when side menu is collapsed
+    // TODO clicked menu background color change (Mui selected-menus)
     <div>
       <CssBaseline />
       <Divider />
