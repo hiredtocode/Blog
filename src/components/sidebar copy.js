@@ -66,9 +66,6 @@ const useStyles = makeStyles((theme) => ({
     overflowX: 'hidden',
     width: theme.spacing(7) + 1,
   },
-  drawerPaper: {
-    width: drawerWidth,
-  },
   header: {
     flexGrow: 1,
   },
@@ -98,7 +95,6 @@ export default function SidebarOpen({ children }) {
   const theme = useTheme();
 
   const [open, setOpen] = React.useState(true);
-  const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -108,28 +104,27 @@ export default function SidebarOpen({ children }) {
     setOpen(false);
   };
 
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
-  const drawer = (
-    <div>
-      <div className={classes.toolbar} />
-    </div>
-  );
   return (
     // <ThemeProvider theme={custom}>
     <div className={classes.root}>
       <CssBaseline />
       {/* Toolbar and Drawer for below 600px */}
       <Hidden smUp implementation="js">
-        <AppBar position="fixed" className={classes.appBar}>
+        <AppBar
+          position="fixed"
+          className={clsx(classes.appBar, {
+            [classes.appBarShift]: !open,
+          })}
+        >
           <Toolbar className={classes.toolbar}>
             <IconButton
               color="inherit"
               aria-label="open drawer"
-              onClick={handleDrawerToggle}
+              onClick={handleDrawerClose}
               edge="start"
-              className={classes.menuButton}
+              className={clsx(classes.menuButton, {
+                [classes.hide]: !open,
+              })}
             >
               <MenuIcon />
             </IconButton>
@@ -142,23 +137,32 @@ export default function SidebarOpen({ children }) {
           </Toolbar>
         </AppBar>
         <Drawer
-          variant="temporary"
-          anchor={theme.direction === 'rtl' ? 'right' : 'left'}
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
+          variant="permanent"
+          className={clsx(classes.drawer, {
+            [classes.drawerOpen]: !open,
+            [classes.drawerClose]: open,
+          })}
           classes={{
-            paper: classes.drawerPaper,
-          }}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            paper: clsx({
+              [classes.drawerOpen]: !open,
+              [classes.drawerClose]: open,
+            }),
           }}
         >
-          {drawer}
+          <div className={classes.toolbar}>
+            <IconButton onClick={handleDrawerOpen}>
+              {theme.direction === 'rtl' ? (
+                <ChevronRightIcon />
+              ) : (
+                <ChevronLeftIcon />
+              )}
+            </IconButton>
+          </div>
           <Nav />
         </Drawer>
         {children}
       </Hidden>
-      {/* Toolbar and Drawer above 600px */}
+      {/* Toolbar and Drawer gets activated when it's below 600px */}
       <Hidden xsDown implementation="js">
         <AppBar
           position="fixed"
