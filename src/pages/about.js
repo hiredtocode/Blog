@@ -21,6 +21,7 @@ export default function About() {
         <a
           href="https://www.merriam-webster.com/dictionary/layman%27s%20terms"
           target="_"
+          rel="noopener"
         >
           layman's terms
         </a>

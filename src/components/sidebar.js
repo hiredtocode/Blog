@@ -16,8 +16,10 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { Link } from 'gatsby-theme-material-ui';
 import clsx from 'clsx';
+import { Brightness4, BrightnessHigh, GitHub } from '@material-ui/icons';
 import Header from './header';
 import Nav from './nav';
+import DarkModeButton from './darkmode';
 
 const drawerWidth = 240;
 
@@ -138,6 +140,19 @@ export default function SidebarOpen({ children }) {
                 <Header />
               </Link>
             </Typography>
+            <IconButton>
+              <Brightness4 />
+              <BrightnessHigh />
+            </IconButton>
+            <IconButton>
+              <a
+                href="https://github.com/hiredtocode"
+                rel="noopener"
+                target="_"
+              >
+                <GitHub />
+              </a>
+            </IconButton>
             <Button color="inherit">LOGIN</Button>
           </Toolbar>
         </AppBar>
@@ -183,6 +198,19 @@ export default function SidebarOpen({ children }) {
                 <Header />
               </Link>
             </Typography>
+            <IconButton>
+              <Brightness4 />
+              <BrightnessHigh />
+            </IconButton>
+            <IconButton>
+              <a
+                href="https://github.com/hiredtocode"
+                rel="noopener"
+                target="_"
+              >
+                <GitHub />
+              </a>
+            </IconButton>
             <Button color="inherit">LOGIN</Button>
           </Toolbar>
         </AppBar>
