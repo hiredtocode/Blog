@@ -1,9 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Container, Paper } from '@material-ui/core';
-import clsx from 'clsx';
 
-const drawerWidth = 250;
+const sidebarWidth = 250;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -11,30 +10,20 @@ const useStyles = makeStyles((theme) => ({
     minHeight: `100vh`,
     marginTop: `10px`,
   },
-  drawerHeader: {
-    display: 'flex',
-    alignItems: 'center',
-    padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
-    ...theme.mixins.toolbar,
-    justifyContent: 'flex-end',
-  },
+
   content: {
+    display: 'flex',
+    flexDirection: 'column',
     flexGrow: 1,
     padding: theme.spacing(3),
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    marginLeft: -drawerWidth,
+    paddingLeft: `${sidebarWidth}px`,
+    paddingTop: `65px`,
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft: `10px`,
+      paddingRight: `10px`,
+    },
   },
-  contentShift: {
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-    marginLeft: 0,
-  },
+
   paper: {
     height: `100vh`,
   },
@@ -43,17 +32,12 @@ const useStyles = makeStyles((theme) => ({
 export default function Content({ children }) {
   const classes = useStyles();
 
-  const [open, setOpen] = React.useState(true);
-
   return (
     <div className={classes.root}>
-      <main
-        className={clsx(classes.content, {
-          [classes.contentShift]: open,
-        })}
-      >
-        <div className={classes.drawerHeader} />
+      <main className={classes.content}>
         <Paper className={classes.paper}>
+          <div className={classes.toolbar} />
+
           <Container maxWidth="md">{children}</Container>
         </Paper>
       </main>

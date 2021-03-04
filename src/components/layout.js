@@ -2,7 +2,7 @@ import React from 'react';
 import { CssBaseline } from '@material-ui/core';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 // import Content from './content';
-import Content from './content copy';
+import Content from './content';
 import Footer from './footer';
 import Sidebar from './sidebar';
 
