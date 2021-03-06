@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
     paddingLeft: `${sidebarWidth}px`,
     paddingTop: `65px`,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('xs')]: {
       paddingLeft: `10px`,
       paddingRight: `10px`,
     },
@@ -36,8 +36,6 @@ export default function Content({ children }) {
     <div className={classes.root}>
       <main className={classes.content}>
         <Paper className={classes.paper}>
-          <div className={classes.toolbar} />
-
           <Container maxWidth="md">{children}</Container>
         </Paper>
       </main>
