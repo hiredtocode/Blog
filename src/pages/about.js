@@ -5,7 +5,6 @@ import { Link } from '@reach/router';
 // import Content from '../components/content';
 import Header from '../components/header';
 import Layout from '../components/layout';
-import Content from '../components/content';
 
 export default function About() {
   return (
