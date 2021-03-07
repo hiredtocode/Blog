@@ -10,11 +10,12 @@ module.exports = {
   },
   /* Your site config here */
   plugins: [
-    //plugins
+    // plugins
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
-    //theme
+    `gatsby-transformer-remark`,
+    // theme
     `gatsby-theme-material-ui`,
 
     {
@@ -27,21 +28,29 @@ module.exports = {
     },
 
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/markdown/`,
+        ignore: [`**/\\.*`], // ignore files starting with a dot
+      },
+    },
+    {
       resolve: `gatsby-plugin-webfonts`,
       options: {
         fonts: {
           google: [
             {
-              family: "Roboto",
-              variants: ["300", "400", "500"],
-              //subsets: ['latin']
-              //text: 'Hello'
-              //fontDisplay: 'swap',
-              //strategy: 'selfHosted' // 'base64' || 'cdn'
+              family: 'Roboto',
+              variants: ['300', '400', '500'],
+              // subsets: ['latin']
+              // text: 'Hello'
+              // fontDisplay: 'swap',
+              // strategy: 'selfHosted' // 'base64' || 'cdn'
             },
             {
-              family: "Open Sans Condensed",
-              variants: ["300", "700"],
+              family: 'Open Sans Condensed',
+              variants: ['300', '700'],
             },
           ],
         },
@@ -51,13 +60,11 @@ module.exports = {
         //   woff: `Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; rv:11.0) like Gecko`,
         //   woff2: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; ServiceUI 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393`,
         // },
-        //formats: ['woff2', 'woff'],
-        //useMinify: true,
-        //usePreload: true,
-        //usePreconnect: false,
+        // formats: ['woff2', 'woff'],
+        // useMinify: true,
+        // usePreload: true,
+        // usePreconnect: false,
       },
-
     },
-
   ],
-}
+};
