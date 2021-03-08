@@ -14,7 +14,7 @@ export default function Index({ data }) {
           .map(({ node: post }) => (
             <div className="blog-post-preview" key={post.id}>
               <h1>
-                <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
+                <Link to={post.frontmatter.slug}>{post.frontmatter.title}</Link>
               </h1>
               <h2>{post.frontmatter.date}</h2>
               <p>{post.excerpt}</p>
@@ -30,7 +30,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
-          excerpt(pruneLength: 250)
+          excerpt(pruneLength: 200)
           id
           frontmatter {
             title
