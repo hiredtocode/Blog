@@ -2,6 +2,7 @@
 slug: '/posts/my-third-post'
 date: '2021-03-09'
 title: 'My third blog post'
+published: true
 ---
 
 <!-- @format -->
