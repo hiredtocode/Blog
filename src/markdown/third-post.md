@@ -1,7 +1,6 @@
 ---
 slug: '/posts/my-third-post'
 date: '2021-03-09'
-updated: '2021-03-20'
 title: 'My third blog post'
 ---
 
