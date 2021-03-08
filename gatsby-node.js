@@ -10,6 +10,7 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
   }
 };
 
+// Programmatically create blog post pages
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
