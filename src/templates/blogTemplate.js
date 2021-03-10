@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Layout from '../components/layout';
+import TableOfContents from '../components/tableofcontents';
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -14,6 +15,9 @@ export default function Template({
         <div className="blog-post">
           <h1>{frontmatter.title}</h1>
           <MDXRenderer>{post.body}</MDXRenderer>
+          {post?.tableOfContents?.items && (
+            <TableOfContents items={post.tableOfContents.items} />
+          )}
           <h4>Last updated: {frontmatter.date}</h4>
         </div>
       </div>
@@ -21,7 +25,7 @@ export default function Template({
   );
 }
 
-export const pageQuery = graphql`
+export const templateQuery = graphql`
   query($slug: String!) {
     mdx(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
@@ -29,6 +33,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
       }
       body
+      tableOfContents
     }
   }
 `;
