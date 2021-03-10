@@ -14,6 +14,7 @@ const theme = createMuiTheme({
           WebkitFontSmoothing: 'auto',
           height: `100%`,
           scrollBehavior: `smooth`,
+          scrollPaddingTop: `80px`,
         },
         body: {
           minHeight: `100%`,
@@ -22,7 +23,7 @@ const theme = createMuiTheme({
     },
   },
 });
-
+console.log(theme);
 export default function Layout({ children }) {
   return (
     <ThemeProvider theme={theme}>
