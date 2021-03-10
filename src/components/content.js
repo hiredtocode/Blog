@@ -27,6 +27,10 @@ const useStyles = makeStyles((theme) => ({
     display: `flex`,
     flexDirection: 'column',
   },
+  paper: {
+    height: `auto`,
+    minHeight: `calc(100vh - 95px)`,
+  },
 }));
 
 export default function Content({ children }) {
@@ -34,11 +38,13 @@ export default function Content({ children }) {
 
   return (
     <div className={classes.root}>
-      <main className={classes.content}>
-        <Container maxWidth="md" className={classes.container}>
-          {children}
-        </Container>
-      </main>
+      <Paper className={classes.paper}>
+        <main className={classes.content}>
+          <Container maxWidth="md" className={classes.container}>
+            {children}
+          </Container>
+        </main>
+      </Paper>
     </div>
   );
 }
