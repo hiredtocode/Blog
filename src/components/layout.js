@@ -13,6 +13,7 @@ const theme = createMuiTheme({
         html: {
           WebkitFontSmoothing: 'auto',
           height: `100%`,
+          scrollBehavior: `smooth`,
         },
         body: {
           minHeight: `100%`,
