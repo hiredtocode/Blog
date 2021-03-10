@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+// This function returns an array of IDs
 function getIds(items) {
   return items.reduce((acc, item) => {
     if (item.url) {
@@ -15,6 +16,7 @@ function getIds(items) {
 
 function useActiveId(itemIds) {
   const [activeId, setActiveId] = useState(`test`);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
