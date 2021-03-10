@@ -10,11 +10,12 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 0,
     flexShrink: 100000,
     flexBasis: `250px`,
-    position: `sticky`,
-    paddingTop: `23px`,
+    position: 'sticky',
     maxHeight: `calc(100vh - 148px)`,
+    paddingTop: `23px`,
     marginLeft: `auto`,
     overflow: `auto`,
+    top: `70px`,
     [theme.breakpoints.up('md')]: {
       display: 'block',
     },
@@ -31,8 +32,11 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     display: `flex`,
-    maxWidth: `1100px`,
+    zIndex: 1,
     paddingTop: `48px`,
+    justifyContent: `center`,
+    maxWidth: `1100px`,
+    alignItems: `flex-start`,
   },
 }));
 
@@ -44,7 +48,7 @@ export default function Template({
   const classes = useStyles();
   return (
     <Layout>
-      <div className={classes.container}>
+      <main className={classes.container}>
         <article className={classes.article}>
           <h1>{frontmatter.title}</h1>
           <MDXRenderer>{post.body}</MDXRenderer>
@@ -57,7 +61,7 @@ export default function Template({
             )}
           </nav>
         </aside>
-      </div>
+      </main>
     </Layout>
   );
 }
