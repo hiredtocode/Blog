@@ -1,22 +1,19 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Layout from '../components/layout';
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
-  const { markdownRemark } = data; // data.markdownRemark holds your post data
-  const { frontmatter, html } = markdownRemark;
+  const post = data.mdx; // data.mdx holds your post data
+  const { frontmatter } = post;
   return (
     <Layout>
       <div className="blog-post-container">
         <div className="blog-post">
           <h1>{frontmatter.title}</h1>
-          <div
-            className="blog-post-content"
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+          <MDXRenderer>{post.body}</MDXRenderer>
           <h4>Last updated: {frontmatter.date}</h4>
         </div>
       </div>
@@ -26,12 +23,12 @@ export default function Template({
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+    mdx(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
       }
-      html
+      body
     }
   }
 `;
