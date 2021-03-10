@@ -121,7 +121,7 @@ export default function SidebarOpen({ children }) {
     <div className={classes.root}>
       <CssBaseline />
       {/* Toolbar and Drawer for below 600px */}
-      <Hidden smUp implementation="js">
+      <Hidden mdUp implementation="js">
         <AppBar position="fixed" className={classes.appBar}>
           <Toolbar className={classes.toolbar}>
             <IconButton
@@ -159,7 +159,7 @@ export default function SidebarOpen({ children }) {
         {children}
       </Hidden>
       {/* Toolbar and Drawer above 600px */}
-      <Hidden xsDown implementation="js">
+      <Hidden smDown implementation="js">
         <AppBar
           position="fixed"
           className={clsx(classes.appBar, {

@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
     paddingLeft: `${sidebarWidth}px`,
     paddingTop: `65px`,
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       paddingLeft: `10px`,
       paddingRight: `10px`,
     },

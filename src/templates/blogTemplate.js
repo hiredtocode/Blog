@@ -13,13 +13,14 @@ const useStyles = makeStyles((theme) => ({
     position: 'sticky',
     maxHeight: `calc(100vh - 148px)`,
     paddingTop: `23px`,
-    marginLeft: `auto`,
+    marginLeft: `50px`,
     overflow: `auto`,
     top: `70px`,
-    [theme.breakpoints.up('md')]: {
+    minWidth: `230px`,
+    [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('xs')]: {
       display: 'none',
     },
   },
@@ -29,6 +30,9 @@ const useStyles = makeStyles((theme) => ({
     flexShrink: 1,
     flexBasis: `686px`,
     maxWidth: `686px`,
+    [theme.breakpoints.down('md')]: {
+      maxWidth: `550px`,
+    },
   },
   container: {
     display: `flex`,
