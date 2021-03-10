@@ -9,7 +9,7 @@ import Header from './header';
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary">
-      {'Copyright © '}
+      {'All rights reserved. © '}
       <Link color="inherit" href="https://material-ui.com/">
         <Header />
       </Link>{' '}
