@@ -22,9 +22,7 @@ import Nav from './nav';
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-  },
+  root: {},
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
     transition: theme.transitions.create(['width', 'margin'], {

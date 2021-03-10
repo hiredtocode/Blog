@@ -44,14 +44,14 @@ const useStyles = makeStyles((theme) => ({
       maxWidth: `650px`,
     },
   },
-  container: {
-    display: `flex`,
-    zIndex: 1,
-    paddingTop: `48px`,
-    justifyContent: `center`,
-    maxWidth: `1100px`,
-    alignItems: `flex-start`,
-  },
+  // container: {
+  //  display: `flex`,
+  //  zIndex: 1,
+  //  paddingTop: `48px`,
+  //  justifyContent: `center`,
+  //  maxWidth: `1100px`,
+  //  alignItems: `flex-start`,
+  // },
 }));
 
 export default function Template({
@@ -62,20 +62,20 @@ export default function Template({
   const classes = useStyles();
   return (
     <Layout>
-      <main className={classes.container}>
-        <article className={classes.article}>
-          <h1>{frontmatter.title}</h1>
-          <MDXRenderer>{post.body}</MDXRenderer>
-          <h4>Last updated: {frontmatter.date}</h4>
-        </article>
-        <aside className={classes.aside}>
-          <nav>
-            {post?.tableOfContents?.items && (
-              <TableOfContents items={post.tableOfContents.items} />
-            )}
-          </nav>
-        </aside>
-      </main>
+      {/* <main className={classes.container}> */}
+      <article className={classes.article}>
+        <h1>{frontmatter.title}</h1>
+        <MDXRenderer>{post.body}</MDXRenderer>
+        <h4>Last updated: {frontmatter.date}</h4>
+      </article>
+      <aside className={classes.aside}>
+        <nav>
+          {post?.tableOfContents?.items && (
+            <TableOfContents items={post.tableOfContents.items} />
+          )}
+        </nav>
+      </aside>
+      {/* </main> */}
     </Layout>
   );
 }
