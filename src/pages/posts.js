@@ -5,7 +5,7 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 
 export default function Index({ data }) {
-  const { edges: posts } = data.allMarkdownRemark;
+  const { edges: posts } = data.allMdx;
   return (
     <Layout>
       <div className="blog-posts">
@@ -27,7 +27,7 @@ export default function Index({ data }) {
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(
+    allMdx(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { published: { eq: true } } }
     ) {
