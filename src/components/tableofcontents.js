@@ -42,13 +42,14 @@ function useActiveId(itemIds) {
 
 function renderItems(items, activeId) {
   return (
-    <ul>
+    <ul style={{ paddingLeft: `15px` }}>
       {items.map((item) => (
-        <li key={item.url}>
+        <li key={item.url} style={{ listStyleType: `none`, marginTop: `.5em` }}>
           <a
             href={item.url}
             style={{
               color: activeId === item.url.slice(1) ? 'tomato' : 'green',
+              textDecoration: `none`,
             }}
           >
             {item.title}
