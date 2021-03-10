@@ -7,7 +7,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    minHeight: `100vh`,
     marginTop: `10px`,
   },
 
@@ -18,6 +17,8 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
     paddingLeft: `${sidebarWidth}px`,
     paddingTop: `65px`,
+    paddingBottom: `10px`,
+    paddingRight: `10px`,
     [theme.breakpoints.down('sm')]: {
       paddingLeft: `10px`,
       paddingRight: `10px`,
@@ -25,10 +26,11 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     display: `flex`,
+    flexDirection: 'column',
   },
   paper: {
     height: `auto`,
-    minHeight: `100vh`,
+    minHeight: `calc(100vh - 177px)`,
   },
 }));
 
