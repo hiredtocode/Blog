@@ -4,6 +4,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 
+// This page shows the list of posts
 export default function Index({ data }) {
   const { edges: posts } = data.allMdx;
   return (
