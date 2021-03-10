@@ -17,8 +17,18 @@ const useStyles = makeStyles((theme) => ({
     overflow: `auto`,
     top: `70px`,
     minWidth: `230px`,
+    [theme.breakpoints.up('xs')]: {
+      display: 'block',
+      marginLeft: `auto`,
+      minWidth: `200px`,
+    },
     [theme.breakpoints.up('sm')]: {
       display: 'block',
+      marginLeft: `auto`,
+    },
+    [theme.breakpoints.up('lg')]: {
+      display: 'block',
+      marginLeft: `50px`,
     },
     [theme.breakpoints.down('xs')]: {
       display: 'none',
@@ -31,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     flexBasis: `686px`,
     maxWidth: `686px`,
     [theme.breakpoints.down('md')]: {
-      maxWidth: `550px`,
+      maxWidth: `650px`,
     },
   },
   container: {
