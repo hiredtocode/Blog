@@ -42,7 +42,7 @@ function useActiveId(itemIds) {
 
 function renderItems(items, activeId) {
   return (
-    <ol>
+    <ul>
       {items.map((item) => (
         <li key={item.url}>
           <a
@@ -56,7 +56,7 @@ function renderItems(items, activeId) {
           {item.items && renderItems(item.items, activeId)}
         </li>
       ))}
-    </ol>
+    </ul>
   );
 }
 
