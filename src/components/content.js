@@ -23,9 +23,12 @@ const useStyles = makeStyles((theme) => ({
       paddingRight: `10px`,
     },
   },
-
+  container: {
+    display: `flex`,
+  },
   paper: {
-    height: `100vh`,
+    height: `auto`,
+    minHeight: `100vh`,
   },
 }));
 
@@ -36,7 +39,9 @@ export default function Content({ children }) {
     <div className={classes.root}>
       <main className={classes.content}>
         <Paper className={classes.paper}>
-          <Container maxWidth="md">{children}</Container>
+          <Container maxWidth="md" className={classes.container}>
+            {children}
+          </Container>
         </Paper>
       </main>
     </div>
