@@ -14,7 +14,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
-    `gatsby-transformer-remark`,
+    `gatsby-plugin-mdx`,
     // theme
     `gatsby-theme-material-ui`,
 
@@ -27,18 +27,9 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        // CommonMark mode (default: true)
-        commonmark: true,
-        // Footnotes mode (default: true)
-        footnotes: true,
-        // Pedantic mode (default: true)
-        pedantic: true,
-        // GitHub Flavored Markdown mode (default: true)
-        gfm: true,
-        // Plugins configs
-        plugins: [`gatsby-remark-slug`],
+        gatsbyRemarkPlugins: [`gatsby-remark-slug`],
       },
     },
     {
