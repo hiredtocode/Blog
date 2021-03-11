@@ -11,7 +11,6 @@ import {
   useTheme,
   Hidden,
 } from '@material-ui/core';
-import grey from '@material-ui/core/colors/grey';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
