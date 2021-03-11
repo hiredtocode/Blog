@@ -1,5 +1,4 @@
 import React from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -20,11 +19,6 @@ function Copyright() {
 }
 
 const useStyles = makeStyles((style) => ({
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-
   footer: {
     padding: style.spacing(3, 2),
     marginTop: 'auto',
@@ -40,15 +34,12 @@ export default function StickyFooter() {
 
   return (
     <>
-      <CssBaseline />
-      <div className={classes.root}>
-        <footer className={classes.footer}>
-          <Container maxWidth="sm">
-            <Typography variant="body1">Bug report link.</Typography>
-            <Copyright />
-          </Container>
-        </footer>
-      </div>
+      <footer className={classes.footer}>
+        <Container maxWidth="sm">
+          <Typography variant="body1">Bug report link.</Typography>
+          <Copyright />
+        </Container>
+      </footer>
     </>
   );
 }

@@ -4,7 +4,6 @@ import {
   AppBar,
   Toolbar,
   Button,
-  CssBaseline,
   Typography,
   IconButton,
   makeStyles,
@@ -22,7 +21,6 @@ import Nav from './nav';
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
-  root: {},
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
     transition: theme.transitions.create(['width', 'margin'], {
@@ -75,7 +73,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     paddingLeft: 18,
     paddingRight: 24,
-
     justifyContent: 'flex-end',
     [theme.breakpoints.down('xs')]: {
       minHeight: 64,
@@ -84,10 +81,6 @@ const useStyles = makeStyles((theme) => ({
     },
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
-  },
-  content: {
-    flexGrow: 1,
-    padding: theme.spacing(3),
   },
 }));
 
@@ -116,46 +109,7 @@ export default function SidebarOpen({ children }) {
   );
   return (
     // <ThemeProvider theme={custom}>
-    <div className={classes.root}>
-      <CssBaseline />
-      {/* Toolbar and Drawer for below 600px */}
-      <Hidden mdUp implementation="js">
-        <AppBar position="fixed" className={classes.appBar}>
-          <Toolbar className={classes.toolbar}>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              onClick={handleDrawerToggle}
-              edge="start"
-              className={classes.menuButton}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" noWrap className={classes.header}>
-              <Link to="/" style={{ color: 'inherit' }}>
-                <Header />
-              </Link>
-            </Typography>
-            <Button color="inherit">LOGIN</Button>
-          </Toolbar>
-        </AppBar>
-        <Drawer
-          variant="temporary"
-          anchor={theme.direction === 'rtl' ? 'right' : 'left'}
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          classes={{
-            paper: classes.drawerPaper,
-          }}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-        >
-          {drawer}
-          <Nav />
-        </Drawer>
-        {children}
-      </Hidden>
+    <>
       {/* Toolbar and Drawer above 600px */}
       <Hidden smDown implementation="js">
         <AppBar
@@ -210,7 +164,45 @@ export default function SidebarOpen({ children }) {
         </Drawer>
         {children}
       </Hidden>
-    </div>
+      {/* Toolbar and Drawer for below 600px */}
+      <Hidden mdUp implementation="js">
+        <AppBar position="fixed" className={classes.appBar}>
+          <Toolbar className={classes.toolbar}>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              onClick={handleDrawerToggle}
+              edge="start"
+              className={classes.menuButton}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography variant="h6" noWrap className={classes.header}>
+              <Link to="/" style={{ color: 'inherit' }}>
+                <Header />
+              </Link>
+            </Typography>
+            <Button color="inherit">LOGIN</Button>
+          </Toolbar>
+        </AppBar>
+        <Drawer
+          variant="temporary"
+          anchor={theme.direction === 'rtl' ? 'right' : 'left'}
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          classes={{
+            paper: classes.drawerPaper,
+          }}
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+          }}
+        >
+          {drawer}
+          <Nav />
+        </Drawer>
+        {children}
+      </Hidden>
+    </>
     // </ThemeProvider>
   );
 }

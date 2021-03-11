@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   List,
-  CssBaseline,
   Divider,
   ListItem,
   ListItemIcon,
@@ -26,7 +25,6 @@ export default function Nav() {
     // TODO tooltip when side menu is collapsed
     // TODO clicked menu background color change (Mui selected-menus)
     <div>
-      <CssBaseline />
       <Divider />
       <List component="nav">
         <Link to="/" activeStyle={style}>
