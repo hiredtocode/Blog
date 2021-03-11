@@ -24,12 +24,10 @@ console.log(theme);
 export default function Layout({ children }) {
   return (
     <ThemeProvider theme={theme}>
-      <div>
-        <CssBaseline />
-        <Sidebar />
-        <Content>{children}</Content>
-        <Footer />
-      </div>
+      <CssBaseline />
+      <Sidebar />
+      <Content>{children}</Content>
+      <Footer />
     </ThemeProvider>
   );
 }
