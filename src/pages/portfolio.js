@@ -8,8 +8,8 @@ export default function Portfolio() {
     <Layout>
       <h1>This website itself is an on-going project.</h1>
       <p>
-        I can use a template and start a blog but I decided to make my own from
-        scratch using Gatsby and Material UI.
+        I could probably use a template and start a blog but I decided to make
+        my own from scratch using Gatsby and Material UI.
       </p>
       <p>
         Currently I'm using Material UI's components such as the drawer and the

@@ -6,7 +6,7 @@ import Layout from '../components/layout';
 export default function Home() {
   return (
     <Layout>
-      <h1>Things I need to work on...</h1>
+      <h1>Things I need to work on:</h1>
       <ul>
         <li>Dark mode toggle</li>
         <li>Move table of contents to the aside right</li>
@@ -17,6 +17,7 @@ export default function Home() {
         <li>Design posts page layout</li>
         <li>Make a simple form in contacts page</li>
         <li>Redesign sidebar menu list</li>
+        <li>English/Korean</li>
       </ul>
     </Layout>
   );
