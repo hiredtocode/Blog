@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { Container } from '@material-ui/core';
 import Layout from '../components/layout';
 import TableOfContents from '../components/tableofcontents';
 
@@ -47,7 +48,6 @@ const useStyles = makeStyles((theme) => ({
   container: {
     display: `flex`,
     zIndex: 1,
-    paddingTop: `48px`,
     justifyContent: `center`,
     maxWidth: `1100px`,
     alignItems: `flex-start`,
@@ -62,20 +62,20 @@ export default function Template({
   const classes = useStyles();
   return (
     <Layout>
-      <main className={classes.container}>
-        <article className={classes.article}>
+      <Container component="main" className={classes.container}>
+        <Container component="article" className={classes.article}>
           <h1>{frontmatter.title}</h1>
           <MDXRenderer>{post.body}</MDXRenderer>
           <h4>Last updated: {frontmatter.date}</h4>
-        </article>
-        <aside className={classes.aside}>
+        </Container>
+        <Container component="aside" className={classes.aside}>
           <nav>
             {post?.tableOfContents?.items && (
               <TableOfContents items={post.tableOfContents.items} />
             )}
           </nav>
-        </aside>
-      </main>
+        </Container>
+      </Container>
     </Layout>
   );
 }
