@@ -17,7 +17,7 @@ export default function Portfolio() {
         tweaking them to my needs.
       </p>
       <p>
-        This site is my first website that is built using Gatsby, Material UI
+        This site is my first website that is built by using Gatsby, Material UI
         and React/JavaScript.
       </p>
     </Layout>
