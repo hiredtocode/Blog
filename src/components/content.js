@@ -2,40 +2,25 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Container } from '@material-ui/core';
 
-const sidebarWidth = 240;
+const sidebarWidth = 200;
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     display: `flex`,
     flexDirection: `row`,
   },
+  leftNav: {
+    minWidth: sidebarWidth,
+  },
+  rightNav: {
+    minWidth: sidebarWidth,
+  },
   content: {
-    width: `100%`,
     paddingTop: `64px`,
     height: `auto`,
     minHeight: `calc(100vh - 95px)`,
-    [theme.breakpoints.up('sm')]: {
-      width: `calc(100vw - 175px)`,
-    },
-    [theme.breakpoints.up('md')]: {
-      width: `calc(100vw - 175px)`,
-    },
+    // [theme.breakpoints.up('xs')]: {},
   },
-  asideLeft: {
-    display: `block`,
-    flexGrow: 0,
-    minWidth: sidebarWidth,
-    [theme.breakpoints.down('sm')]: {
-      display: `none`,
-    },
-  },
-  asideRight: {
-    display: `block`,
-    flexGrow: 0,
-    minWidth: sidebarWidth,
-    [theme.breakpoints.down('sm')]: {
-      display: `none`,
-    },
-  },
+
   container: {
     display: `flex`,
     flexDirection: 'column',
@@ -47,13 +32,11 @@ export default function Content({ children }) {
 
   return (
     <div className={classes.wrapper}>
-      <nav className={classes.asideLeft} />
-      <main className={classes.content}>
-        <Container maxWidth="md" className={classes.container}>
-          {children}
-        </Container>
-      </main>
-      <nav className={classes.asideRight} />
+      <aside className={classes.leftNav} />
+      <Container component="main" className={classes.content}>
+        {children}
+      </Container>
+      <aside className={classes.rightNav} />
     </div>
   );
 }
