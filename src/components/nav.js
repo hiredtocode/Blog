@@ -2,11 +2,13 @@ import React from 'react';
 import {
   List,
   Divider,
-  ListItem,
   ListItemIcon,
   ListItemText,
   makeStyles,
+  MenuItem,
+  MenuList,
 } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'gatsby-theme-material-ui';
 import HomeIcon from '@material-ui/icons/Home';
 import InfoIcon from '@material-ui/icons/Info';
@@ -19,63 +21,70 @@ const useStyles = makeStyles(() => ({
     textAlignLast: `end`,
     paddingRight: `10px`,
   },
+  navLink: {
+    '&:hover': {
+      backgroundColor: `#aeae`,
+    },
+  },
 }));
 
+const StyledMenuItem = withStyles((theme) => ({
+  root: {
+    '&:focus': {
+      backgroundColor: theme.palette.primary.main,
+      '& .MuiListItemIcon-root, & .MuiListItemText-primary': {
+        color: theme.palette.common.white,
+      },
+    },
+  },
+}))(MenuItem);
+
 export default function Nav() {
-  const activeLink = {
-    color: `red`,
-  };
   const classes = useStyles();
 
   return (
     // TODO Need to make the icons change colors too so that when the side menu is minimized users can see where they're at
     // TODO tooltip when side menu is collapsed
     // TODO clicked menu background color change (Mui selected-menus)
-    <div>
-      <Divider />
-      <List component="nav">
-        <Link to="/" activeStyle={activeLink}>
-          <ListItem button>
-            <ListItemIcon>
-              <HomeIcon />
-            </ListItemIcon>
-            <ListItemText primary="Home" className={classes.listText} />
-          </ListItem>
-        </Link>
-        <Link to="/about" activeStyle={activeLink}>
-          <ListItem button>
-            <ListItemIcon>
-              <InfoIcon />
-            </ListItemIcon>
-            <ListItemText primary="About" className={classes.listText} />
-          </ListItem>
-        </Link>
-        <Link to="/posts" activeStyle={activeLink}>
-          <ListItem button>
-            <ListItemIcon>
-              <PostAddIcon />
-            </ListItemIcon>
-            <ListItemText primary="Posts" className={classes.listText} />
-          </ListItem>
-        </Link>
-        <Link to="/contact" activeStyle={activeLink}>
-          <ListItem button>
-            <ListItemIcon>
-              <ContactMailIcon />
-            </ListItemIcon>
-            <ListItemText primary="Contact" className={classes.listText} />
-          </ListItem>
-        </Link>
-        <Link to="/portfolio" activeStyle={activeLink}>
-          <ListItem button>
-            <ListItemIcon>
-              <LibraryBooksIcon />
-            </ListItemIcon>
-            <ListItemText primary="Portfolio" className={classes.listText} />
-          </ListItem>
-        </Link>
-      </List>
-      <Divider />
-    </div>
+    <MenuList>
+      <StyledMenuItem component={Link} to="/" className={classes.navLink}>
+        <ListItemIcon>
+          <HomeIcon />
+        </ListItemIcon>
+        <ListItemText primary="Home" className={classes.listText} />
+      </StyledMenuItem>
+      <StyledMenuItem component={Link} to="/about" className={classes.navLink}>
+        <ListItemIcon>
+          <InfoIcon />
+        </ListItemIcon>
+        <ListItemText primary="About" className={classes.listText} />
+      </StyledMenuItem>
+      <StyledMenuItem component={Link} to="/posts" className={classes.navLink}>
+        <ListItemIcon>
+          <PostAddIcon />
+        </ListItemIcon>
+        <ListItemText primary="Posts" className={classes.listText} />
+      </StyledMenuItem>
+      <StyledMenuItem
+        component={Link}
+        to="/contact"
+        className={classes.navLink}
+      >
+        <ListItemIcon>
+          <ContactMailIcon />
+        </ListItemIcon>
+        <ListItemText primary="Contact" className={classes.listText} />
+      </StyledMenuItem>
+      <StyledMenuItem
+        component={Link}
+        to="/portfolio"
+        className={classes.navLink}
+      >
+        <ListItemIcon>
+          <LibraryBooksIcon />
+        </ListItemIcon>
+        <ListItemText primary="Portfolio" className={classes.listText} />
+      </StyledMenuItem>
+    </MenuList>
   );
 }
