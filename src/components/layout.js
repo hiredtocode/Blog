@@ -25,10 +25,10 @@ const theme = createMuiTheme({
     MuiLink: {
       underline: `none`,
     },
+    MuiContainer: {},
   },
 });
 
-console.log(theme);
 export default function Layout({ children }) {
   return (
     <ThemeProvider theme={theme}>
