@@ -18,6 +18,14 @@ const theme = createMuiTheme({
       },
     },
   },
+  props: {
+    MuiButtonBase: {
+      disableRipple: true,
+    },
+    MuiLink: {
+      underline: `none`,
+    },
+  },
 });
 
 console.log(theme);
