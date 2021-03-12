@@ -19,7 +19,7 @@ import clsx from 'clsx';
 import Header from './header';
 import Nav from './nav';
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     paddingLeft: 18,
-    paddingRight: 24,
+    paddingRight: 6,
     justifyContent: 'flex-end',
     backgroundColor: `transparent`,
     [theme.breakpoints.down('xs')]: {
