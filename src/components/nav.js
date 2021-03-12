@@ -1,7 +1,5 @@
 import React from 'react';
 import {
-  List,
-  Divider,
   ListItemIcon,
   ListItemText,
   makeStyles,
