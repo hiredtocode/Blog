@@ -1,6 +1,7 @@
 import React from 'react';
 import { CssBaseline } from '@material-ui/core';
-import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import {ThemeProvider,createMuiTheme} from '@material-ui/core/styles';
+import {MDXProvider} from '@mdx-js/react'
 import Content from './content';
 import Footer from './footer';
 import Sidebar from './sidebar';
@@ -34,7 +35,9 @@ export default function Layout({ children }) {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Sidebar />
-      <Content>{children}</Content>
+        <MDXProvider>
+          <Content>{children}</Content>
+        </MDXProvider>
       <Footer />
     </ThemeProvider>
   );
