@@ -1,5 +1,4 @@
 import { createMuiTheme } from '@material-ui/core';
-import { deepPurple, amber } from '@material-ui/core/colors';
 
 const CustomTheme = createMuiTheme({
   palette: {
@@ -86,12 +85,6 @@ CustomTheme.overrides = {
     root: {
       borderRadius: 5,
       textTransform: 'none',
-    },
-    containedPrimary: {
-      '&:hover': {
-        backgroundColor: amber,
-        color: deepPurple,
-      },
     },
   },
 };
