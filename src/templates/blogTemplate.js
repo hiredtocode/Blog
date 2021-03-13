@@ -2,10 +2,10 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { Container } from '@material-ui/core';
 import Layout from '../components/layout';
 import TableOfContents from '../components/tableofcontents';
 
+const tocWidth = 240;
 const useStyles = makeStyles((theme) => ({
   aside: {
     flexGrow: 0,
@@ -13,23 +13,34 @@ const useStyles = makeStyles((theme) => ({
     flexBasis: `250px`,
     position: 'sticky',
     maxHeight: `calc(100vh - 148px)`,
-    paddingTop: `23px`,
     marginLeft: `50px`,
     overflow: `auto`,
-    top: `70px`,
-    minWidth: `230px`,
-    [theme.breakpoints.up('xs')]: {
+    top: `100px`,
+    minWidth: tocWidth,
+    [theme.breakpoints.up('xl')]: {
       display: 'block',
-      marginLeft: `10px`,
-      minWidth: `200px`,
-    },
-    [theme.breakpoints.up('sm')]: {
-      display: 'block',
-      marginLeft: `10px`,
+      marginLeft: `50px`,
+      minWidth: tocWidth,
     },
     [theme.breakpoints.up('lg')]: {
       display: 'block',
       marginLeft: `50px`,
+      minWidth: tocWidth,
+    },
+    [theme.breakpoints.up('md')]: {
+      display: 'block',
+      marginLeft: `50px`,
+      minWidth: tocWidth,
+    },
+    [theme.breakpoints.up('sm')]: {
+      display: 'block',
+      marginLeft: `10px`,
+      minWidth: tocWidth,
+    },
+    [theme.breakpoints.up('xs')]: {
+      display: 'block',
+      marginLeft: `10px`,
+      minWidth: `200px`,
     },
     [theme.breakpoints.down('xs')]: {
       display: 'none',
@@ -45,13 +56,7 @@ const useStyles = makeStyles((theme) => ({
       maxWidth: `650px`,
     },
   },
-  container: {
-    display: `flex`,
-    zIndex: 1,
-    justifyContent: `center`,
-    maxWidth: `1100px`,
-    alignItems: `flex-start`,
-  },
+
 }));
 
 export default function Template({
@@ -62,20 +67,16 @@ export default function Template({
   const classes = useStyles();
   return (
     <Layout>
-      <Container component="main" className={classes.container}>
-        <Container component="article" className={classes.article}>
+        <article className={classes.article}>
           <h1>{frontmatter.title}</h1>
           <MDXRenderer>{post.body}</MDXRenderer>
           <h4>Last updated: {frontmatter.date}</h4>
-        </Container>
-        <Container component="aside" className={classes.aside}>
-          <nav>
-            {post?.tableOfContents?.items && (
-              <TableOfContents items={post.tableOfContents.items} />
-            )}
-          </nav>
-        </Container>
-      </Container>
+        </article>
+        {/*<aside className={classes.aside}>
+          {post?.tableOfContents?.items && (
+            <TableOfContents items={post.tableOfContents.items} />
+          )}
+        </aside>*/}
     </Layout>
   );
 }

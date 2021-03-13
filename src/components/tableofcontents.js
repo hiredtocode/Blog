@@ -31,11 +31,6 @@ function useActiveId(itemIds) {
     itemIds.forEach((id) => {
       observer.observe(document.getElementById(id));
     });
-    // return () => {
-    //  itemIds.forEach((id) => {
-    //    observer.unobserve(document.getElementById(id));
-    //  });
-    // };
   }, [itemIds]);
   return activeId;
 }
