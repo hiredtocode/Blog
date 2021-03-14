@@ -75,9 +75,7 @@ export default function Template({
           <h4>Last updated: {frontmatter.date}</h4>
         </article>
         <aside className={classes.aside}>
-          {post?.tableOfContents?.items && (
-            <TableOfContents items={post.tableOfContents.items} />
-          )}
+          {post?.tableOfContents?.items && <TableOfContents items={post.tableOfContents.items} />}
         </aside>
       </MDXProvider>
     </Layout>
