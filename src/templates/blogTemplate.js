@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { graphql } from 'gatsby';
+import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Layout from '../components/layout';
 import TableOfContents from '../components/tableofcontents';
@@ -56,7 +57,6 @@ const useStyles = makeStyles((theme) => ({
       maxWidth: `650px`,
     },
   },
-
 }));
 
 export default function Template({
@@ -65,18 +65,21 @@ export default function Template({
   const post = data.mdx; // data.mdx holds your post data
   const { frontmatter } = post;
   const classes = useStyles();
+
   return (
     <Layout>
+      <MDXProvider>
         <article className={classes.article}>
           <h1>{frontmatter.title}</h1>
           <MDXRenderer>{post.body}</MDXRenderer>
           <h4>Last updated: {frontmatter.date}</h4>
         </article>
-        {/*<aside className={classes.aside}>
+        <aside className={classes.aside}>
           {post?.tableOfContents?.items && (
             <TableOfContents items={post.tableOfContents.items} />
           )}
-        </aside>*/}
+        </aside>
+      </MDXProvider>
     </Layout>
   );
 }
