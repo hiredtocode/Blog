@@ -1,0 +1,9 @@
+{
+  "extends": "hiredtocode",
+  "root": true,
+  "rules": {
+    "spaced-comment": 1,
+    "no-var": 1,
+    "comma-dangle": 0
+  }
+}
