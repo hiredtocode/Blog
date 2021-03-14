@@ -1,21 +1,9 @@
 {
-	"extends": ["wesbos", "plugin: react-hooks/recommended"],
-	"rules": {
-		"no-console": 2,
-		"allowForLoopAfterthoughts": true,
-		"react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}],
-		"react/prop-types": 0,
-		"prettier/prettier": [
-			"error",
-			{
-				"trailingComma": "es5",
-				"tabWidth": 8
-			},
-			"warn",
-			{
-				"printWidth": 120,
-				"singleQuote": true
-			}
-		]
-	}
+  "extends": "hiredtocode",
+  "root": true,
+  "rules": {
+    "spaced-comment": 1,
+    "no-var": 1,
+    "comma-dangle": 0
+  }
 }
