@@ -5554,6 +5554,11 @@
     "object.assign" "^4.1.0"
     "object.entries" "^1.1.2"
 
+"eslint-config-hiredtocode@^1.0.2":
+  "integrity" "sha512-dLmtIVzNYFFesSOkQ4VlVcZ+SdUixF1sdnSvqNG8ee2R9xsFsUv0gYJ7AD7E8e5rlRxUH9PbKHPcuqxM5vv+rQ=="
+  "resolved" "https://registry.npmjs.org/eslint-config-hiredtocode/-/eslint-config-hiredtocode-1.0.2.tgz"
+  "version" "1.0.2"
+
 "eslint-config-prettier@^6.11.0":
   "integrity" "sha512-oB8cpLWSAjOVFEJhhyMZh6NOEOtBVziaqdDQ86+qhDHFbZXoRTM7pNSvFRfW/W/L/LrQ38C99J5CGuRBBzBsdA=="
   "resolved" "https://registry.npmjs.org/eslint-config-prettier/-/eslint-config-prettier-6.11.0.tgz"
@@ -5567,11 +5572,6 @@
   "version" "5.2.1"
   dependencies:
     "confusing-browser-globals" "^1.0.9"
-
-"eslint-config-wesbos@^1.0.1":
-  "integrity" "sha512-CHlJ/B2hrVsfRm3OaRH+UFD6DINV4SzFtPODzMw1y7VH5bPZqlvndcqKRnicEK9bmu2U3AT43XWU2QT2vBRDFg=="
-  "resolved" "https://registry.npmjs.org/eslint-config-wesbos/-/eslint-config-wesbos-1.0.1.tgz"
-  "version" "1.0.1"
 
 "eslint-import-resolver-node@^0.3.3":
   "integrity" "sha512-ogtf+5AB/O+nM6DIeBUNr2fuT7ot9Qg/1harBfBtaP13ekEWFQEEMP94BCB7zaNW3gyY+8SHYF00rnqYwXKWOA=="
