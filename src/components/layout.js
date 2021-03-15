@@ -15,6 +15,9 @@ const theme = createMuiTheme({
           scrollBehavior: `smooth`,
           scrollPaddingTop: `80px`,
         },
+        a: {
+          textDecoration: `none`,
+        },
       },
     },
   },
