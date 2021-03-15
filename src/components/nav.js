@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  ListItemIcon,
-  ListItemText,
-  makeStyles,
-  MenuItem,
-  MenuList,
-} from '@material-ui/core';
+import { ListItemIcon, ListItemText, makeStyles, MenuItem, MenuList } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'gatsby-theme-material-ui';
 import HomeIcon from '@material-ui/icons/Home';
@@ -26,17 +20,6 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const StyledMenuItem = withStyles((theme) => ({
-  root: {
-    '&:focus': {
-      backgroundColor: theme.palette.primary.main,
-      '& .MuiListItemIcon-root, & .MuiListItemText-primary': {
-        color: theme.palette.common.white,
-      },
-    },
-  },
-}))(MenuItem);
-
 export default function Nav() {
   const classes = useStyles();
 
@@ -45,44 +28,36 @@ export default function Nav() {
     // TODO tooltip when side menu is collapsed
     // TODO clicked menu background color change (Mui selected-menus)
     <MenuList>
-      <StyledMenuItem component={Link} to="/" className={classes.navLink}>
+      <MenuItem component={Link} to="/" className={classes.navLink}>
         <ListItemIcon>
           <HomeIcon />
         </ListItemIcon>
         <ListItemText primary="Home" className={classes.listText} />
-      </StyledMenuItem>
-      <StyledMenuItem component={Link} to="/about" className={classes.navLink}>
+      </MenuItem>
+      <MenuItem component={Link} to="/about" className={classes.navLink}>
         <ListItemIcon>
           <InfoIcon />
         </ListItemIcon>
         <ListItemText primary="About" className={classes.listText} />
-      </StyledMenuItem>
-      <StyledMenuItem component={Link} to="/posts" className={classes.navLink}>
+      </MenuItem>
+      <MenuItem component={Link} to="/posts" className={classes.navLink}>
         <ListItemIcon>
           <PostAddIcon />
         </ListItemIcon>
         <ListItemText primary="Posts" className={classes.listText} />
-      </StyledMenuItem>
-      <StyledMenuItem
-        component={Link}
-        to="/contact"
-        className={classes.navLink}
-      >
+      </MenuItem>
+      <MenuItem component={Link} to="/contact" className={classes.navLink}>
         <ListItemIcon>
           <ContactMailIcon />
         </ListItemIcon>
         <ListItemText primary="Contact" className={classes.listText} />
-      </StyledMenuItem>
-      <StyledMenuItem
-        component={Link}
-        to="/portfolio"
-        className={classes.navLink}
-      >
+      </MenuItem>
+      <MenuItem component={Link} to="/portfolio" className={classes.navLink}>
         <ListItemIcon>
           <LibraryBooksIcon />
         </ListItemIcon>
         <ListItemText primary="Portfolio" className={classes.listText} />
-      </StyledMenuItem>
+      </MenuItem>
     </MenuList>
   );
 }
