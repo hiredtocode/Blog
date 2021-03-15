@@ -5,6 +5,7 @@
  */
 
 module.exports = {
+  pathPrefix: '/hiredtocode',
   siteMetadata: {
     title: `Web Dev Madness`,
   },
