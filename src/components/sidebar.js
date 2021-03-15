@@ -133,7 +133,7 @@ export default function SidebarOpen({ children }) {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" noWrap className={classes.header}>
-              <Link to="/" style={{ color: 'inherit' }}>
+              <Link to="/" style={{ color: '#263238' }}>
                 <Header />
               </Link>
             </Typography>
@@ -179,7 +179,7 @@ export default function SidebarOpen({ children }) {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" noWrap className={classes.header}>
-              <Link to="/" style={{ color: 'inherit' }}>
+              <Link to="/" style={{ color: '#263238' }}>
                 <Header />
               </Link>
             </Typography>
