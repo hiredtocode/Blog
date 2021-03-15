@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
   },
   navLink: {
     '&:hover': {
-      backgroundColor: `#aeae`,
+      backgroundColor: `#eceff1`,
     },
   },
 }));
