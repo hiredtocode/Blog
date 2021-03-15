@@ -1,49 +1,45 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
 import { graphql } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { Grid } from '@material-ui/core';
 import Layout from '../components/layout';
 import TableOfContents from '../components/tableofcontents';
 
-const tocWidth = 240;
+const tocWidth = 200;
 const useStyles = makeStyles((theme) => ({
   aside: {
     flexGrow: 0,
-    flexShrink: 100000,
-    flexBasis: `250px`,
+    flexShrink: 0,
+    flexBasis: tocWidth,
     position: 'sticky',
     maxHeight: `calc(100vh - 148px)`,
-    marginLeft: `50px`,
     overflow: `auto`,
     top: `100px`,
     minWidth: tocWidth,
-    [theme.breakpoints.up('xl')]: {
-      display: 'block',
-      marginLeft: `50px`,
-      minWidth: tocWidth,
-    },
-    [theme.breakpoints.up('lg')]: {
-      display: 'block',
-      marginLeft: `50px`,
-      minWidth: tocWidth,
-    },
-    [theme.breakpoints.up('md')]: {
-      display: 'block',
-      marginLeft: `50px`,
-      minWidth: tocWidth,
-    },
-    [theme.breakpoints.up('sm')]: {
-      display: 'block',
-      marginLeft: `10px`,
-      minWidth: tocWidth,
-    },
-    [theme.breakpoints.up('xs')]: {
-      display: 'block',
-      marginLeft: `10px`,
-      minWidth: `200px`,
-    },
-    [theme.breakpoints.down('xs')]: {
+    // [theme.breakpoints.up('xl')]: {
+    //  display: 'block',
+    //  minWidth: tocWidth,
+    // },
+    // [theme.breakpoints.up('lg')]: {
+    //  display: 'block',
+    //  minWidth: tocWidth,
+    // },
+    // [theme.breakpoints.up('md')]: {
+    //  display: 'block',
+    //  minWidth: tocWidth,
+    // },
+    // [theme.breakpoints.up('sm')]: {
+    //  display: 'block',
+    //  minWidth: tocWidth,
+    // },
+    // [theme.breakpoints.up('xs')]: {
+    //  display: 'block',
+    //  minWidth: `200px`,
+    // },
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
@@ -57,6 +53,15 @@ const useStyles = makeStyles((theme) => ({
       maxWidth: `650px`,
     },
   },
+  container: {
+    width: `100%`,
+    // background: `yellow`,
+    // border: [[1, 'solid', 'blue']],
+    // direction: 'row',
+  },
+  item: {
+    // background: `white`,
+  },
 }));
 
 export default function Template({
@@ -69,14 +74,20 @@ export default function Template({
   return (
     <Layout>
       <MDXProvider>
-        <article className={classes.article}>
-          <h1>{frontmatter.title}</h1>
-          <MDXRenderer>{post.body}</MDXRenderer>
-          <h4>Last updated: {frontmatter.date}</h4>
-        </article>
-        <aside className={classes.aside}>
-          {post?.tableOfContents?.items && <TableOfContents items={post.tableOfContents.items} />}
-        </aside>
+        <Grid container justify="center" className={classes.container}>
+          <Grid item xs={12} md={8} className={classes.item}>
+            <Container className={classes.article}>
+              <h1>{frontmatter.title}</h1>
+              <MDXRenderer>{post.body}</MDXRenderer>
+              <h4>Last updated: {frontmatter.date}</h4>
+            </Container>
+          </Grid>
+          <Grid item>
+            <aside className={classes.aside}>
+              {post?.tableOfContents?.items && <TableOfContents items={post.tableOfContents.items} />}
+            </aside>
+          </Grid>
+        </Grid>
       </MDXProvider>
     </Layout>
   );
