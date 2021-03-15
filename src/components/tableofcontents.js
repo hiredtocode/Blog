@@ -44,7 +44,7 @@ function renderItems(items, activeId) {
             href={item.url}
             style={{
               color: activeId === item.url.slice(1) ? 'blue' : 'grey',
-              textDecoration: `none`,
+              // textDecoration: `none`,
             }}
           >
             {item.title}
