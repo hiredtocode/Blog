@@ -6,7 +6,7 @@ import Layout from '../components/layout';
 export default function Home() {
   return (
     <Layout>
-      <h1>Things I need to work on:</h1>
+      <h2>Things I need to work on:</h2>
       <ul>
         <li>Dark mode toggle</li>
         <li>Move table of contents to the aside right</li>
