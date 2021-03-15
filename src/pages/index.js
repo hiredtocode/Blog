@@ -8,6 +8,7 @@ export default function Home() {
     <Layout>
       <h1>Things I need to work on:</h1>
       <ul>
+        <li>Test<li>
         <li>Dark mode toggle</li>
         <li>Move table of contents to the aside right</li>
         <li>Make a todo page</li>
