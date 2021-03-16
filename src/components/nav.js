@@ -20,10 +20,31 @@ const useStyles = makeStyles(() => ({
       background: `blue`,
     },
   },
+  activeStyle: {
+    '&:hover': {
+      backgroundColor: `#eceff1`,
+    },
+    '&.active': {
+      background: `blue`,
+    },
+  },
 }));
 
 export default function Nav() {
   const classes = useStyles();
+
+  // Handles partially active link stylings
+  const activeStyle = { background: 'blue' };
+  const navLink = {
+    '&:hover': {
+      backgroundColor: `#eceff1`,
+    },
+    '&.active': {
+      background: `blue`,
+    },
+  };
+  const isPartiallyActive = ({ isPartiallyCurrent }) =>
+    isPartiallyCurrent ? { style: { ...navLink, ...activeStyle } } : null;
 
   return (
     // TODO Need to make the icons change colors too so that when the side menu is minimized users can see where they're at
@@ -42,7 +63,13 @@ export default function Nav() {
         </ListItemIcon>
         <ListItemText primary="About" className={classes.listText} />
       </MenuItem>
-      <MenuItem component={Link} to="/posts" className={classes.navLink} activeClassName="active">
+      <MenuItem
+        component={Link}
+        to="/posts"
+        className={classes.navLink}
+        activeStyle={activeStyle}
+        getProps={isPartiallyActive}
+      >
         <ListItemIcon>
           <PostAddIcon />
         </ListItemIcon>
