@@ -39,7 +39,7 @@ export default function Content({ children }) {
   return (
     <Paper className={classes.wrapper}>
       <aside className={classes.leftNav} />
-      <Container component="main" className={classes.content}>
+      <Container component="main" maxWidth="md" className={classes.content}>
         {children}
       </Container>
       {/* <aside className={classes.rightNav} /> */}

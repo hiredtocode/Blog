@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './toc.css';
 
 // This function returns an array of IDs
 function getIds(items) {
@@ -42,10 +43,10 @@ function renderItems(items, activeId) {
         <li key={item.url} style={{ listStyleType: `none`, marginTop: `.5em` }}>
           <a
             href={item.url}
-            style={{
-              color: activeId === item.url.slice(1) ? 'blue' : 'grey',
-              textDecoration: `none`,
-            }}
+            // style={{
+            //  color: activeId === item.url.slice(1) ? '#ee6352' : 'grey',
+            // }}
+            className={`${activeId === item.url.slice(1) ? 'link active' : 'link'}`}
           >
             {item.title}
           </a>
