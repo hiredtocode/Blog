@@ -1,6 +1,6 @@
 {
   "extends": "hiredtocode",
-  "root": true,
+  //"root": true,
   "rules": {
     "spaced-comment": 1,
     "no-var": 1,
