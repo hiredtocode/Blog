@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import './toc.css';
 
 // This function returns an array of IDs
 function getIds(items) {
