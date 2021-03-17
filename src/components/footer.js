@@ -22,10 +22,7 @@ const useStyles = makeStyles((style) => ({
   footer: {
     padding: style.spacing(3, 2),
     marginTop: 'auto',
-    backgroundColor:
-      style.palette.type === 'light'
-        ? style.palette.grey[200]
-        : style.palette.grey[800],
+    backgroundColor: style.palette.type === 'light' ? style.palette.grey[200] : style.palette.grey[800],
   },
 }));
 
@@ -36,7 +33,16 @@ export default function StickyFooter() {
     <>
       <footer className={classes.footer}>
         <Container maxWidth="xs">
-          <Typography variant="body1">Bug report link.</Typography>
+          <Typography variant="body1">
+            {' '}
+            <a href="https://github.com/hiredtocode/blog/issues" target="_" rel="noopener">
+              Bug report link.
+            </a>
+            <br />
+            <a href="https://github.com/hiredtocode" target="_" rel="noopener">
+              Github
+            </a>
+          </Typography>
           <Copyright />
         </Container>
       </footer>
