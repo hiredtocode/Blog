@@ -7,25 +7,16 @@ import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import PostAddIcon from '@material-ui/icons/PostAdd';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   listText: {
     textAlignLast: `end`,
     paddingRight: `10px`,
   },
+
   navLink: {
-    '&:hover': {
-      backgroundColor: `#eceff1`,
-    },
+    position: `relative`,
     '&.active': {
-      background: `blue`,
-    },
-  },
-  activeStyle: {
-    '&:hover': {
-      backgroundColor: `#eceff1`,
-    },
-    '&.active': {
-      background: `blue`,
+      color: 'blue',
     },
   },
 }));
@@ -34,15 +25,18 @@ export default function Nav() {
   const classes = useStyles();
 
   // Handles partially active link stylings
-  const activeStyle = { background: 'blue' };
+  const activeStyle = {
+    color: 'blue',
+  };
   const navLink = {
     '&:hover': {
       backgroundColor: `#eceff1`,
     },
     '&.active': {
-      background: `blue`,
+      color: 'blue',
     },
   };
+
   const isPartiallyActive = ({ isPartiallyCurrent }) =>
     isPartiallyCurrent ? { style: { ...navLink, ...activeStyle } } : null;
 

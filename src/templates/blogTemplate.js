@@ -6,6 +6,7 @@ import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Grid } from '@material-ui/core';
 import Layout from '../components/layout';
+
 import TableOfContents from '../components/tableofcontents';
 
 const tocWidth = 200;
@@ -47,11 +48,14 @@ const useStyles = makeStyles((theme) => ({
     display: `block`,
     flexGrow: 1,
     flexShrink: 1,
-    flexBasis: `686px`,
-    maxWidth: `686px`,
-    [theme.breakpoints.down('md')]: {
-      maxWidth: `650px`,
-    },
+    // flexBasis: `686px`,
+    // maxWidth: `686px`,
+    // [theme.breakpoints.up('sm')]: {
+    //  maxWidth: `650px`,
+    // },
+    // [theme.breakpoints.up('md')]: {
+    //  maxWidth: `860px`,
+    // },
   },
   container: {
     width: `100%`,
@@ -76,7 +80,7 @@ export default function Template({
       <MDXProvider>
         <Grid container justify="center" className={classes.container}>
           <Grid item xs={12} md={8} className={classes.item}>
-            <Container className={classes.article}>
+            <Container maxWidth="md" className={classes.article}>
               <h1>{frontmatter.title}</h1>
               <MDXRenderer>{post.body}</MDXRenderer>
               <h4>Last updated: {frontmatter.date}</h4>
