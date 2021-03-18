@@ -7,7 +7,7 @@ import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import PostAddIcon from '@material-ui/icons/PostAdd';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   listText: {
     textAlignLast: `end`,
     paddingRight: `10px`,

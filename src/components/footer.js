@@ -9,7 +9,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary">
       {'All rights reserved. © '}
-      <Link color="inherit" href="https://material-ui.com/">
+      <Link color="inherit" href="https://jasonhan.netlify.app/contact">
         <Header />
       </Link>{' '}
       {new Date().getFullYear()}
@@ -35,12 +35,16 @@ export default function StickyFooter() {
         <Container maxWidth="xs">
           <Typography variant="body1">
             {' '}
-            <a href="https://github.com/hiredtocode/blog/issues" target="_" rel="noopener">
-              Bug report link.
+            <a href="https://github.com/hiredtocode" target="_" rel="noopener">
+              My Github
             </a>
             <br />
-            <a href="https://github.com/hiredtocode" target="_" rel="noopener">
-              Github
+            <a href="https://www.freecodecamp.org/hiredtocode" target="_" rel="noopener">
+              My FreeCodeCamp
+            </a>
+            <br />
+            <a href="https://github.com/hiredtocode/blog/issues" target="_" rel="noopener">
+              Found a bug or a typo? Bug report link.
             </a>
           </Typography>
           <Copyright />
