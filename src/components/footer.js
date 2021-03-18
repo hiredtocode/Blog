@@ -9,7 +9,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary">
       {'All rights reserved. © '}
-      <Link color="inherit" href="https://material-ui.com/">
+      <Link color="inherit" href="https://jasonhan.netlify.app/contact">
         <Header />
       </Link>{' '}
       {new Date().getFullYear()}
