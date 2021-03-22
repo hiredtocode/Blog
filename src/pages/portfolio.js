@@ -30,22 +30,22 @@ export default function Portfolio() {
     <Layout>
       <fieldset className={classes.fieldset}>
         <legend>
-          <h2>Currently working on Projects</h2>
+          <h2>Finished Projects</h2>
         </legend>
         <Grid container spacing={3}>
           <Grid item>
-            <WebDevMadness />
+            <NamaSushi />
           </Grid>
         </Grid>
       </fieldset>
       <Divider className={classes.divider} />
       <fieldset className={classes.fieldset}>
         <legend>
-          <h2>Finished Projects</h2>
+          <h2>Currently working on Projects</h2>
         </legend>
         <Grid container spacing={3}>
           <Grid item>
-            <NamaSushi />
+            <WebDevMadness />
           </Grid>
         </Grid>
       </fieldset>

@@ -77,6 +77,7 @@ export default function WebDevMadness() {
             Instead of using a pre-made template, I decided to make it from scratch with help of Material UI. I will be
             using this website as a blog as well as a portfolio.
           </Typography>
+          <Typography paragraph>I'll be implementing new features as I learn to make it better.</Typography>
         </CardContent>
       </Collapse>
     </Card>
