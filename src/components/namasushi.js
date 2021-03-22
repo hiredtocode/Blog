@@ -28,7 +28,7 @@ export default function NamaSushi() {
       <a href="https://namasushi.ca" target="_" rel="noopener">
         {' '}
         <CardActionArea>
-          <CardHeader gutterBottom variant="h5" component="h2" title="Nama Sushi" subheader="September 14, 2016" />
+          <CardHeader variant="h5" component="h2" title="Nama Sushi" subheader="September 14, 2016" />
           <CardMedia component="img" className={classes.media} src={NamaSushiImage} title="Nama Sushi" />
           <CardContent>
             <Typography variant="body2" color="textSecondary" component="p">

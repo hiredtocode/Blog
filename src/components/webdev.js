@@ -28,13 +28,7 @@ export default function WebDevMadness() {
       <a href="https://jasonhan.netlify.app" target="_" rel="noopener">
         {' '}
         <CardActionArea>
-          <CardHeader
-            gutterBottom
-            variant="h5"
-            component="h2"
-            title="Web Dev Madness"
-            subheader="February 23, 2021 ~ present"
-          />
+          <CardHeader variant="h5" component="h2" title="Web Dev Madness" subheader="February 23, 2021 ~ present" />
           <CardMedia component="img" className={classes.media} src={WebDev} title="Web Dev Madness" />
           <CardContent>
             <Typography variant="body2" color="textSecondary" component="p">
