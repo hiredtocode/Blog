@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { Grid, Divider, makeStyles } from '@material-ui/core';
-import Layout from '../components/layout';
 import NamaSushi from '../components/namasushi';
 import WebDevMadness from '../components/webdev';
 import JsAlgoAndData from '../components/jsalgocert';
@@ -27,7 +26,7 @@ export default function Portfolio() {
   const classes = useStyles();
 
   return (
-    <Layout>
+    <>
       <fieldset className={classes.fieldset}>
         <legend>
           <h2>Finished Projects</h2>
@@ -63,6 +62,6 @@ export default function Portfolio() {
           </Grid>
         </Grid>
       </fieldset>
-    </Layout>
+    </>
   );
 }

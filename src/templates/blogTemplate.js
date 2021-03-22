@@ -5,7 +5,6 @@ import { graphql } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Grid } from '@material-ui/core';
-import Layout from '../components/layout';
 
 import TableOfContents from '../components/tableofcontents';
 
@@ -76,7 +75,7 @@ export default function Template({
   const classes = useStyles();
 
   return (
-    <Layout>
+    <>
       <MDXProvider>
         <Grid container justify="center" className={classes.container}>
           <Grid item xs={12} md={8} className={classes.item}>
@@ -93,7 +92,7 @@ export default function Template({
           </Grid>
         </Grid>
       </MDXProvider>
-    </Layout>
+    </>
   );
 }
 
