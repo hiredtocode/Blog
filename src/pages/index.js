@@ -9,6 +9,7 @@ export default function Home() {
       <h2>Things I need to work on:</h2>
       <ul>
         <li>Dark mode toggle</li>
+        <li>Optimize Gatsby build time</li>
         <li>Reduce build time</li>
         <li>Page transitions</li>
         <li>Move table of contents to the aside right</li>
