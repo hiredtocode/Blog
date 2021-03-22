@@ -8,6 +8,12 @@ module.exports = {
   pathPrefix: '/blog',
   siteMetadata: {
     title: `Web Dev Madness`,
+    description: `Personal blog / portfolio of Jason Han`,
+    social: {
+      github: 'https://github.com/hiredtocode',
+      freecodecamp: 'https://www.freecodecamp.org/hiredtocode',
+      homepage: 'https://jasonhan.netlify.app/',
+    },
   },
   /* Your site config here */
   plugins: [
@@ -16,9 +22,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-mdx`,
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`, // dynamic images
     // theme
     `gatsby-theme-material-ui`,
 
@@ -45,6 +48,16 @@ module.exports = {
         ignore: [`**/\\.*`], // ignore files starting with a dot
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/static/images/`,
+      },
+    },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`, // dynamic images
     {
       resolve: `gatsby-plugin-webfonts`,
       options: {
