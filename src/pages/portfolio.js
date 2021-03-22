@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
 import NamaSushi from '../components/namasushi';
 import WebDevMadness from '../components/webdev';
