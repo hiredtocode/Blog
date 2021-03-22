@@ -10,8 +10,16 @@ import ResponsiveWebCertif from '../components/responsivewebcertif';
 
 const useStyles = makeStyles(() => ({
   divider: {
-    marginTop: `50px`,
-    marginBottom: `50px`,
+    marginTop: `20px`,
+  },
+  fieldset: {
+    border: {
+      color: '#fefefe',
+      width: 2,
+      style: 'solid',
+      opacity: 0.2,
+    },
+    borderRadius: `8px`,
   },
 }));
 
@@ -20,23 +28,41 @@ export default function Portfolio() {
 
   return (
     <Layout>
-      <Grid container spacing={3}>
-        <Grid item>
-          <NamaSushi />
+      <fieldset className={classes.fieldset}>
+        <legend>
+          <h2>Currently working on Projects</h2>
+        </legend>
+        <Grid container spacing={3}>
+          <Grid item>
+            <WebDevMadness />
+          </Grid>
         </Grid>
-        <Grid item>
-          <WebDevMadness />
-        </Grid>
-      </Grid>
+      </fieldset>
       <Divider className={classes.divider} />
-      <Grid container xs={12} spacing={3}>
-        <Grid item>
-          <JsAlgoAndData />
+      <fieldset className={classes.fieldset}>
+        <legend>
+          <h2>Finished Projects</h2>
+        </legend>
+        <Grid container spacing={3}>
+          <Grid item>
+            <NamaSushi />
+          </Grid>
         </Grid>
-        <Grid item>
-          <ResponsiveWebCertif />
+      </fieldset>
+      <Divider className={classes.divider} />
+      <fieldset className={classes.fieldset}>
+        <legend>
+          <h2>Certificates</h2>
+        </legend>
+        <Grid container spacing={3}>
+          <Grid item>
+            <JsAlgoAndData />
+          </Grid>
+          <Grid item>
+            <ResponsiveWebCertif />
+          </Grid>
         </Grid>
-      </Grid>
+      </fieldset>
     </Layout>
   );
 }
