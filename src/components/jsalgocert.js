@@ -4,7 +4,7 @@ import JavascriptAlgo from '../../static/images/jsalgoandds.jpg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    maxWidth: 250,
   },
   media: {
     height: `auto`,
@@ -28,11 +28,7 @@ export default function JavascriptAlgorithms() {
       >
         {' '}
         <CardActionArea>
-          <CardHeader
-            variant="h5"
-            component="h2"
-            title="JavaScript Algorithms and Data Structure Certificate from FCC"
-          />
+          <CardHeader title="FCC Certificate 1" />
           <CardMedia
             component="img"
             className={classes.media}

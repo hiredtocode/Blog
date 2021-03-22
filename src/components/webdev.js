@@ -12,7 +12,7 @@ import WebDev from '../../static/images/cards/webdevmadness.jpg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    maxWidth: 250,
   },
   media: {
     height: `auto`,

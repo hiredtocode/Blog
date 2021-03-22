@@ -12,7 +12,7 @@ import NamaSushiImage from '../../static/images/cards/namasushi.jpg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    maxWidth: 250,
   },
   media: {
     height: `auto`,

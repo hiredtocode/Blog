@@ -4,7 +4,7 @@ import ResponsiveCertif from '../../static/images/responsiveweb.jpg';
 
 const useStyles = makeStyles(() => ({
   root: {
-    maxWidth: 345,
+    maxWidth: 250,
   },
   media: {
     height: `auto`,
@@ -23,7 +23,7 @@ export default function ResponsiveCertification() {
       <a href="https://www.freecodecamp.org/certification/hiredtocode/responsive-web-design" target="_" rel="noopener">
         {' '}
         <CardActionArea>
-          <CardHeader variant="h5" component="h2" title="Responsive Web Design Certificate from FCC" />
+          <CardHeader title="FCC Certificate 2" />
           <CardMedia component="img" className={classes.media} src={ResponsiveCertif} title="Responsive Web Design" />
           <CardContent>
             <Typography variant="body2" color="textSecondary" component="p">
