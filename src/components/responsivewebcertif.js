@@ -1,10 +1,5 @@
 import React from 'react';
-import { makeStyles, CardActionArea, CardActions } from '@material-ui/core';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
+import { makeStyles, CardActionArea, Card, CardHeader, CardMedia, CardContent, Typography } from '@material-ui/core';
 import ResponsiveCertif from '../../static/images/responsiveweb.jpg';
 
 const useStyles = makeStyles(() => ({
@@ -36,7 +31,6 @@ export default function ResponsiveCertification() {
             </Typography>
           </CardContent>
         </CardActionArea>
-        <CardActions />
       </a>
     </Card>
   );
