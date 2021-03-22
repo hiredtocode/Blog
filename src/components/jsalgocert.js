@@ -1,13 +1,8 @@
 import React from 'react';
-import { makeStyles, CardActionArea, CardActions } from '@material-ui/core';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
+import { makeStyles, CardActionArea, CardMedia, CardContent, CardHeader, Card, Typography } from '@material-ui/core';
 import JavascriptAlgo from '../../static/images/jsalgoandds.jpg';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
   },
@@ -23,6 +18,7 @@ const useStyles = makeStyles(() => ({
 
 export default function JavascriptAlgorithms() {
   const classes = useStyles();
+
   return (
     <Card className={classes.root}>
       <a
@@ -50,7 +46,6 @@ export default function JavascriptAlgorithms() {
             </Typography>
           </CardContent>
         </CardActionArea>
-        <CardActions />
       </a>
     </Card>
   );
