@@ -6,6 +6,8 @@ import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
 import NamaSushi from '../components/namasushi';
 import WebDevMadness from '../components/webdev';
+import JsAlgoAndData from '../components/jsalgocert';
+import ResponsiveWebCertif from '../components/responsivewebcertif';
 
 export default function Portfolio() {
   return (
@@ -18,18 +20,10 @@ export default function Portfolio() {
           <WebDevMadness />
         </Grid>
         <Grid item>
-          <StaticImage
-            src="../../static/images/jsalgoandds.jpg"
-            alt="Javascript algorithm and data structure"
-            width={400}
-            loading="eager"
-          />
-          <StaticImage
-            src="../../static\images\responsiveweb.jpg"
-            alt="Javascript algorithm and data structure"
-            width={400}
-            loading="eager"
-          />
+          <JsAlgoAndData />
+        </Grid>
+        <Grid item>
+          <ResponsiveWebCertif />
         </Grid>
       </Grid>
     </Layout>
