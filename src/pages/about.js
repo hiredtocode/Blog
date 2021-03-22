@@ -4,11 +4,10 @@ import { Link } from '@reach/router';
 // import Layout from '../components/layout';
 // import Content from '../components/content';
 import Header from '../components/header';
-import Layout from '../components/layout';
 
 export default function About() {
   return (
-    <Layout>
+    <>
       <h2>
         Welcome to <Header />
       </h2>
@@ -44,6 +43,6 @@ export default function About() {
 
         <li>Last updated: Feb, 4th 2021</li>
       </ul>
-    </Layout>
+    </>
   );
 }

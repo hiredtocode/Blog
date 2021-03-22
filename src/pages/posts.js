@@ -2,13 +2,12 @@
 
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import Layout from '../components/layout';
 
 // This page shows the list of posts
 export default function Index({ data }) {
   const { edges: posts } = data.allMdx;
   return (
-    <Layout>
+    <>
       <div className="blog-posts">
         {posts
           .filter((post) => post.node.frontmatter.title.length > 0)
@@ -22,16 +21,13 @@ export default function Index({ data }) {
             </div>
           ))}
       </div>
-    </Layout>
+    </>
   );
 }
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMdx(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { published: { eq: true } } }
-    ) {
+    allMdx(sort: { order: DESC, fields: [frontmatter___date] }, filter: { frontmatter: { published: { eq: true } } }) {
       edges {
         node {
           excerpt(pruneLength: 200)
