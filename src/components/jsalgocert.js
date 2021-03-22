@@ -31,8 +31,7 @@ export default function JavascriptAlgorithms() {
           <CardHeader
             variant="h5"
             component="h2"
-            title="JavaScript Algorithms and Data Structure"
-            subheader="December 15, 2020"
+            title="JavaScript Algorithms and Data Structure Certificate from FCC"
           />
           <CardMedia
             component="img"
