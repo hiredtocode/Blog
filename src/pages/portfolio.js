@@ -29,7 +29,7 @@ export default function Portfolio() {
     <>
       <fieldset className={classes.fieldset}>
         <legend>
-          <h2>Finished Projects</h2>
+          <h2>완성된 프로잭트 - Finished Projects</h2>
         </legend>
         <Grid container spacing={3}>
           <Grid item>
@@ -40,7 +40,7 @@ export default function Portfolio() {
       <Divider className={classes.divider} />
       <fieldset className={classes.fieldset}>
         <legend>
-          <h2>Currently working on Projects</h2>
+          <h2>작업중인 프로잭트 - Currently working on Projects</h2>
         </legend>
         <Grid container spacing={3}>
           <Grid item>
@@ -51,7 +51,7 @@ export default function Portfolio() {
       <Divider className={classes.divider} />
       <fieldset className={classes.fieldset}>
         <legend>
-          <h2>Certificates</h2>
+          <h2>자격증 - Certificates</h2>
         </legend>
         <Grid container spacing={3}>
           <Grid item>
