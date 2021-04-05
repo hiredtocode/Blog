@@ -3,6 +3,7 @@ slug: '/wil/viewchild'
 date: '2021-04-05'
 title: 'ViewChild'
 published: true
+tag: pass-data
 ---
 
 # @ViewChild()
