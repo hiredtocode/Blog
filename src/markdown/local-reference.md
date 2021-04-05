@@ -3,6 +3,7 @@ slug: '/wil/local-reference-in-templates'
 date: '2021-04-05'
 title: 'Using local references in templates'
 published: true
+tag: pass-data
 ---
 
 # Local references
@@ -11,7 +12,41 @@ published: true
 - Accessed anywhere in the template.
 ## Setting local ref
 
-You can set a local reference with `#`
+You can set a local reference---
+slug: '/wil/ng-content'
+date: '2021-04-05'
+title: 'ng-content'
+published: true
+tag: pass-data
+---
+# Projecting Content into Components with ng-content
+
+- Pass contents to app.component from your component.
+
+## ng-content
+
+- In react? gatsby? This reminds me of the `{children}` or the `<themeProvider>` where it allows us to hook content to another component.
+
+```html
+<div>
+  <ng-content></ng-content>
+</div>
+```
+
+and change the props to ngFor loop
+
+```ts
+<div>
+  <app-component
+  *ngFor="let someThing of someThings"
+  [smThing]="someThings">
+    // code from the app component here.
+  </app-component>
+</div>
+```
+
+This is useful if you're building or implementing a re-usable widget.
+ with `#`
 
 ```html
 <input #ref>
