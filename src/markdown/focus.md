@@ -8,10 +8,10 @@ tag: pass-data, viewchild
 
 # How to have mouse focused on an input when page loads
 
-1. Create a local ref on a HTML element
-2. Create a property of ElementRef
-3. Attach @ViewChild method with ref variable
-4. Define ngAfterViewInit() method with logic as for the requirement
+1. Create a `local ref` on a HTML element
+2. Create a property of `ElementRef`
+3. Attach `@ViewChild` method with `ref variable`
+4. Define `ngAfterViewInit()` method with `logic` as for the requirement
 
 1:
 
@@ -43,7 +43,7 @@ export class AppComponent implements AfterViewInit{
 }
 ```
 
-By adding a console.log to check out more methods and properties of nameElementRef
+By adding a console.log to check out more `methods` and `properties` of `nameElementRef`
 
 ```ts:app.component.ts
   ngAfterViewInit() {
@@ -51,3 +51,5 @@ By adding a console.log to check out more methods and properties of nameElementR
     console.log( this.nameElementRef );
   }
 ```
+
+`@ViewChild()` can't be triggered before `ngAfterViewInit` method
