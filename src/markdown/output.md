@@ -25,7 +25,7 @@ tag: Output
 import { Output, EventEmitter } from '@angular/core'
 
 export class ChildComponent {
-  Output() notify: = new EventEmitter<string>();
+  Output() notify = new EventEmitter<string>();
 }
 ```
 
@@ -50,7 +50,7 @@ onClick() method is triggered and the `$event` property is going to store the me
 
 ```ts:child-comp.ts
 export class ChildComponent {
-  Output() notify: EventEmitter<string> = new EventEmitter<string>();
+  Output() notify = new EventEmitter<string>();
 
   onClick(): void{
     this.notify.emit('Message from child')
