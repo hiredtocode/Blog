@@ -1,6 +1,6 @@
 ---
 slug: '/wil/input'
-date: '2021-04-05'
+date: '2021-04-06'
 title: 'Input'
 published: true
 tag: input
