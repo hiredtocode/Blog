@@ -20,7 +20,7 @@ tag: life-cycle
 ## ngOnChanges
 - ngOnChanges needs to be imported.
 - `implements OnChanges` from class
-- `changes: SimpleChanges` prop is needed to make it function
+- `changes: SimpleChanges` This is the only hook that needs an argument to function
 
 ```ts
    export class EventBindingComponent implements OnInit, OnChanges {
@@ -31,4 +31,6 @@ tag: life-cycle
 }
 ```
 
-   Constructor > OnChanges [element] > ngOnInit >
+## Life cycle order
+
+   Constructor > OnChanges [element] > Constructor > ngOnInit > ngDoCheck > ngAfterContentInit > ngAfterViewInit > ngAfterViewChecked > ngOnDestroy
