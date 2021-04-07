@@ -8,7 +8,7 @@ const theme = createMuiTheme({
     secondary: {
       main: '#ff0303',
     },
-    type: `light`,
+    type: `dark`,
   },
   props: {
     MuiButtonBase: {
@@ -29,7 +29,7 @@ const theme = createMuiTheme({
           scrollPaddingTop: `80px`,
         },
         a: {
-          color: `#262626`,
+          color: `#4433FF`,
           textDecoration: `none`,
 
           '&:visited': {

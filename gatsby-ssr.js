@@ -2,7 +2,7 @@
 /* eslint-disable import/prefer-default-export */
 import React from 'react';
 import { ThemeProvider } from '@material-ui/core/styles';
-import { CssBaseline } from '@material-ui/core';
+import { CssBaseline, Paper } from '@material-ui/core';
 import Layout from './src/components/layout';
 import Theme from './src/components/theme';
 
@@ -15,7 +15,7 @@ export function wrapRootElement({ element }) {
   return (
     <ThemeProvider theme={Theme}>
       <CssBaseline />
-      {element}
+      <Paper>{element}</Paper>
     </ThemeProvider>
   );
 }
