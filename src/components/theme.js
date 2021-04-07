@@ -1,6 +1,4 @@
-import React from 'react';
-import { CssBaseline } from '@material-ui/core';
-import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
   palette: {
@@ -10,7 +8,7 @@ const theme = createMuiTheme({
     secondary: {
       main: '#ff0303',
     },
-    type: `light`,
+    type: `dark`,
   },
   props: {
     MuiButtonBase: {
@@ -31,7 +29,7 @@ const theme = createMuiTheme({
           scrollPaddingTop: `80px`,
         },
         a: {
-          color: `#262626`,
+          color: `#4433FF`,
           textDecoration: `none`,
 
           '&:visited': {
@@ -65,11 +63,4 @@ const theme = createMuiTheme({
 //  );
 // }
 
-export default function Layout({ children }) {
-  return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      {children}
-    </ThemeProvider>
-  );
-}
+export default theme;
