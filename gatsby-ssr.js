@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable import/prefer-default-export */
 import React from 'react';
+import { ThemeProvider } from '@material-ui/core/styles';
+import { CssBaseline, Paper } from '@material-ui/core';
 import Layout from './src/components/layout';
 import Theme from './src/components/theme';
 
@@ -10,5 +12,10 @@ export function wrapPageElement({ element, props }) {
 }
 
 export function wrapRootElement({ element }) {
-  return <Theme>{element}</Theme>;
+  return (
+    <ThemeProvider theme={Theme}>
+      <CssBaseline />
+      <Paper>{element}</Paper>
+    </ThemeProvider>
+  );
 }

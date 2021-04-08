@@ -20,12 +20,36 @@ export default function Home() {
       <h2>Todo list:</h2>
       <ul>
         <li>English/Korean</li>
-        <li>Dark mode toggle</li>
-        <li>Optimize Gatsby build time</li>
-        <li>Reduce build time</li>
-        <li>Page transitions</li>
+        <li>
+          Dark mode toggle
+          <br />
+          <a
+            href="https://dev.to/bytesizedcode/speed-up-your-gatsby-application-s-build-time-by-300-with-incremental-builds-3bhe https://www.joshwcomeau.com/react/dark-mode/"
+            target="_"
+            rel="noopener"
+          >
+            https://www.joshwcomeau.com/react/dark-mode/
+          </a>
+        </li>
+        <li>
+          Optimize Gatsby build time <br />
+          <a
+            href="https://www.netlify.com/blog/2020/06/11/5-optimizations-for-faster-gatsby-builds/"
+            target="_"
+            rel="noopener"
+          >
+            https://www.netlify.com/blog/2020/06/11/5-optimizations-for-faster-gatsby-builds/{' '}
+          </a>
+          <br />{' '}
+          <a
+            href="https://dev.to/bytesizedcode/speed-up-your-gatsby-application-s-build-time-by-300-with-incremental-builds-3bhe"
+            target="_"
+            rel="noopener"
+          >
+            https://dev.to/bytesizedcode/speed-up-your-gatsby-application-s-build-time-by-300-with-incremental-builds-3bhe
+          </a>
+        </li>
         <li>Move table of contents to the aside right</li>
-        <li>Make a todo page</li>
         <li>Search function</li>
         <li>Filter posts by tags</li>
         <li>Design the index page layout</li>
