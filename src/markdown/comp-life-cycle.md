@@ -5,6 +5,7 @@ title: 'Component life cycle'
 published: true
 tag: life-cycle
 ---
+
 # Understanding Component life cycle
 
 - `ngOnInit(){}` is a life cycle hook.
@@ -18,19 +19,17 @@ tag: life-cycle
   7. `ngOnDestroy()` is triggered when code removes a component by Angular and so it's a good idea to construct some "clean-up code" here.
 
 ## ngOnChanges
+
 - ngOnChanges needs to be imported.
 - `implements OnChanges` from class
 - `changes: SimpleChanges` This is the only hook that needs an argument to function
 
 ```ts
-   export class EventBindingComponent implements OnInit, OnChanges {
-
-     ngOnChanges(changes: SimpleChanges){
-
-     }
+export class EventBindingComponent implements OnInit, OnChanges {
+  ngOnChanges(changes: SimpleChanges) {}
 }
 ```
 
 ## Life cycle order
 
-   Constructor > OnChanges [element] > Constructor > ngOnInit > ngDoCheck > ngAfterContentInit > ngAfterViewInit > ngAfterViewChecked > ngOnDestroy
+Constructor > OnChanges [element] > Constructor > ngOnInit > ngDoCheck > ngAfterContentInit > ngAfterViewInit > ngAfterViewChecked > ngOnDestroy
