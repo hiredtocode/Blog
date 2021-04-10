@@ -14,6 +14,10 @@ export default function Home() {
         포트폴리오/블로그를 완성을 하겠습니다.
       </p>
       <p>3월 23일 2021년 - 업데이트 됨.</p>
+      <p>취직된 회사에서 Angular로 모든 작업을 해야 합니다.</p>
+      <p>Angular를 공부를 하느라 웹사이트 업데이트가 좀 늦어지고 있습니다.</p>
+      <p>근무를 Angular으로 계속 할 예정이라서 이 사이트를 다시 Angular로 만들까 현재 고민 중입니다.</p>
+      <p>4월 10일 2021년 - 업데이트 됨.</p>
       <br />
       <Divider />
       <br />
@@ -51,6 +55,7 @@ export default function Home() {
         </li>
         <li>Move table of contents to the aside right</li>
         <li>Search function</li>
+        <li>Blog post format/styling</li>
         <li>Filter posts by tags</li>
         <li>Design the index page layout</li>
         <li>Design posts page layout</li>
