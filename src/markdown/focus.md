@@ -6,7 +6,7 @@ published: true
 tag: pass-data, viewchild
 ---
 
-# How to have mouse focused on an input when page loads
+## focused on an input when page loads
 
 1. Create a `local ref` on a HTML element
 2. Create a property of `ElementRef`
@@ -15,13 +15,13 @@ tag: pass-data, viewchild
 
 1:
 
-```html:app.component.html
-<div><input #nameRef></div>
+```html
+<div><input #nameRef /></div>
 ```
 
-2,3
+2,3:
 
-```ts:app.component.ts
+```ts
 import { Component, ViewChild } from '@angular/core';
 
 export class AppComponent {
@@ -29,12 +29,12 @@ export class AppComponent {
 }
 ```
 
-4
+4:
 
-```ts:app.component.ts
+```ts
 import { Component, ViewChild } from '@angular/core';
 
-export class AppComponent implements AfterViewInit{
+export class AppComponent implements AfterViewInit {
   @ViewChild('nameRef') nameElementRef: ElementRef;
 
   ngAfterViewInit() {
@@ -45,7 +45,7 @@ export class AppComponent implements AfterViewInit{
 
 By adding a console.log to check out more `methods` and `properties` of `nameElementRef`
 
-```ts:app.component.ts
+```ts
   ngAfterViewInit() {
     this.nameElementRef.nativeElement.focus();
     console.log( this.nameElementRef );

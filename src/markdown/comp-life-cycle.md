@@ -6,7 +6,7 @@ published: true
 tag: life-cycle
 ---
 
-# Understanding Component life cycle
+## Understanding Component life cycle
 
 - `ngOnInit(){}` is a life cycle hook.
 - When different components are instantiated, ngOnInit() goes into a few different phases. Which will give us some chances to hook into them with methods if they're present.
@@ -18,7 +18,7 @@ tag: life-cycle
   6. `ngAfterViewChecked()` is triggered after the view has been checked by Angular.
   7. `ngOnDestroy()` is triggered when code removes a component by Angular and so it's a good idea to construct some "clean-up code" here.
 
-## ngOnChanges
+### ngOnChanges
 
 - ngOnChanges needs to be imported.
 - `implements OnChanges` from class
@@ -30,6 +30,6 @@ export class EventBindingComponent implements OnInit, OnChanges {
 }
 ```
 
-## Life cycle order
+### Life cycle order
 
 Constructor > OnChanges [element] > Constructor > ngOnInit > ngDoCheck > ngAfterContentInit > ngAfterViewInit > ngAfterViewChecked > ngOnDestroy

@@ -6,17 +6,17 @@ published: true
 tag: pass-data
 ---
 
-# @ViewChild()
+## @ViewChild()
 
 - import ViewChild
 - @ViewChild('arg')
 - passing in local reference to methods or to templates
 
-```HTML
-<input #ref>
+```html
+<input #ref />
 ```
 
-## Pass in a local ref as string from HTML file:
+### Pass in a local ref as string from HTML file:
 
 ```ts
 import { ViewChild } from '@angular/core';
@@ -30,13 +30,13 @@ export class SomeClass implements OnInit {
 
   ngOnInit(): void {}
 
-  onAddServer(){
-    serverContent: this.newServerInput
+  onAddServer() {
+    serverContent: this.newServerInput;
   }
 }
 ```
 
-## Or you can pass in a component instead
+### Or you can pass in a component instead
 
 ```ts
 @ViewChild(SomeComponent) serverContentInput;
