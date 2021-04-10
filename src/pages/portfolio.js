@@ -40,7 +40,7 @@ export default function Portfolio() {
       <Divider className={classes.divider} />
       <fieldset className={classes.fieldset}>
         <legend>
-          <h2>작업중인 프로잭트 - Currently working on Projects</h2>
+          <h2>작업중인 프로잭트 - Currently developing Project(s)</h2>
         </legend>
         <Grid container spacing={3}>
           <Grid item>
