@@ -30,16 +30,16 @@ const theme = createMuiTheme({
         },
         a: {
           color: `#4433FF`,
-          textDecoration: `none`,
+          // textDecoration: `none`,
 
           '&:visited': {
-            color: `#767676`,
+            color: `#3BA4D4`,
           },
           '&:hover': {
             color: `#4600a7`,
           },
           '&.active': {
-            color: `#444444`,
+            color: `#3BA4D4`,
             fontWeight: `bold`,
           },
         },
